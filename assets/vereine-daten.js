@@ -68,13 +68,6 @@ const VEREINE = [
   },
 
   {
-    name: "Sportverein VfB Schuby",
-    ansprechpartner: [
-      { name: "Uwe Jürgensen", funktion: "Vorsitzender des Vereins", telefon: "04625 1895575", email: "", website: "" }
-    ]
-  },
-
-  {
     name: "SSF Südschleswiger Verein, Bezirk Schuby",
     ansprechpartner: [
       { name: "Manuel Barz", funktion: "Vorsitzender des Vereins", telefon: "", email: "", website: "" }
@@ -106,6 +99,13 @@ const VEREINE = [
     name: "Wildtierrettung Schuby e.V.",
     ansprechpartner: [
       { name: "Arne Hinrichsen", funktion: "Vorsitzender des Vereins", telefon: "0176 55922002", email: "", website: "" }
+    ]
+  },
+
+  {
+    name: "Sportverein VfB Schuby",
+    ansprechpartner: [
+      { name: "Steffen Bartelt", funktion: "Vorsitzender des Vereins", telefon: "", email: "", website: "" }
     ]
   }
 ];
