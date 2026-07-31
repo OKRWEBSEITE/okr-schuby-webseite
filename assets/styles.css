@@ -1,0 +1,437 @@
+/* ============================================================
+   OrtsKulturRing Schuby e.V. – gemeinsames Stylesheet
+   Wird von allen Seiten (Start, Termine, Anmeldung, Kontakt, …)
+   eingebunden, damit Design & Farben überall konsistent bleiben.
+   ============================================================ */
+
+  /* ============ Design-Tokens ============ */
+  :root{
+    --green:        #5EAE3E;   /* Primärfarbe, aus dem Flyer übernommen */
+    --green-dark:   #3C7A28;   /* Kopfzeile, Hover */
+    --green-tint:   #EEF6E9;   /* sehr helles Grün für Flächen */
+    --terracotta:   #A43020;   /* Akzentfarbe, aus dem Flyer übernommen */
+    --terracotta-t: #F7E7E3;   /* helles Terracotta für Badges */
+    --ink:          #2B2E29;   /* Fließtext */
+    --ink-soft:     #5B5F58;   /* gedämpfter Text */
+    --paper:        #FCFCFA;   /* Seiten-Hintergrund */
+    --card:         #FFFFFF;
+    --line:         #E3E6DE;
+    --radius:       14px;
+    --shadow:       0 4px 16px rgba(43,46,41,.08);
+    --font-display: 'Fredoka', sans-serif;
+    --font-body:    'Work Sans', sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; margin:0 0 .5rem; color:var(--green-dark);}
+  a{color:var(--green-dark);}
+  img{max-width:100%; display:block;}
+  .container{max-width:1120px; margin:0 auto; padding:0 1.25rem;}
+
+  /* ============ Ring-Signatur ============
+     Der Name "OrtsKulturRing" ist wörtlich ein Ring/Kreis – dieses Motiv
+     zieht sich als wiederkehrendes Gestaltungselement durch die Seite:
+     als Aufzählungs-Ring, als Trenner und als dezentes Hero-Muster. */
+  .ring-bullet{
+    display:inline-block; width:.6rem; height:.6rem; border:2.5px solid var(--terracotta);
+    border-radius:50%; margin-right:.6rem; vertical-align:middle; flex:none;
+  }
+  .section-eyebrow{
+    display:flex; align-items:center; gap:.5rem; font-family:var(--font-display);
+    font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; color:var(--terracotta);
+    font-weight:600; margin-bottom:.5rem;
+  }
+
+  /* ============ Kopfzeile & Navigation ============ */
+  header{
+    position:sticky; top:0; z-index:100; background:var(--green-dark);
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:.7rem 1.25rem; max-width:1120px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:.7rem; text-decoration:none; color:#fff;}
+  .brand img{height:44px; width:44px; border-radius:50%; background:#fff; padding:3px; box-shadow:0 1px 4px rgba(0,0,0,.25);}
+  .brand-text{font-family:var(--font-display); font-weight:600; font-size:1.05rem; color:#fff; line-height:1.2;}
+  .brand-text small{display:block; font-family:var(--font-body); font-weight:400; font-size:.72rem; opacity:.85; letter-spacing:.02em;}
+
+  nav.main-nav{display:flex; align-items:center; gap:.2rem;}
+  nav.main-nav a{
+    color:#fff; text-decoration:none; font-size:.92rem; font-weight:500;
+    padding:.55rem .8rem; border-radius:8px; white-space:nowrap;
+  }
+  nav.main-nav a:hover, nav.main-nav a:focus-visible{background:rgba(255,255,255,.14);}
+  nav.main-nav a.cta{
+    background:var(--terracotta); font-weight:600; margin-left:.4rem;
+  }
+  nav.main-nav a.cta:hover{background:#8a2818;}
+
+  .hamburger{
+    display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:44px; height:44px; background:none; border:none; cursor:pointer; padding:0;
+  }
+  .hamburger span{display:block; width:24px; height:3px; background:#fff; border-radius:2px; margin:0 auto; transition:transform .2s ease, opacity .2s ease;}
+  .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+  .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+  /* Tablet & Handy: Hamburger-Menü */
+  @media (max-width: 900px){
+    .hamburger{display:flex;}
+    nav.main-nav{
+      display:flex; flex-direction:column; align-items:stretch; gap:0;
+      position:fixed; top:70px; right:0; left:0; background:var(--green-dark);
+      box-shadow:0 8px 16px rgba(0,0,0,.18);
+      max-height:0; overflow:hidden; transition:max-height .28s ease;
+      padding:0 1.25rem;
+    }
+    nav.main-nav.open{max-height:520px; padding:.5rem 1.25rem 1.1rem;}
+    nav.main-nav a{padding:.85rem .4rem; border-top:1px solid rgba(255,255,255,.12); border-radius:0;}
+    nav.main-nav a.cta{margin:.6rem 0 0; text-align:center; border-radius:8px; border-top:none;}
+  }
+
+  /* ============ Hero ============ */
+  .hero{
+    position:relative; overflow:hidden;
+    background:linear-gradient(180deg, var(--green-tint) 0%, var(--paper) 100%);
+    padding:3.5rem 0 3rem;
+  }
+  .hero::before, .hero::after{
+    content:""; position:absolute; border-radius:50%; border:2px solid rgba(94,174,62,.25);
+  }
+  .hero::before{ width:340px; height:340px; top:-140px; right:-110px; }
+  .hero::after{ width:220px; height:220px; bottom:-100px; right:140px; border-color:rgba(164,48,32,.18); }
+  .hero-inner{position:relative; z-index:1; max-width:680px;}
+  .hero h1{font-size:clamp(1.9rem, 4vw, 2.7rem); line-height:1.15; margin-bottom:.9rem;}
+  .hero p.lead{font-size:1.08rem; color:var(--ink-soft); margin-bottom:1.6rem;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:.8rem;}
+  .btn{
+    display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-display);
+    font-weight:600; font-size:.95rem; padding:.75rem 1.4rem; border-radius:10px;
+    text-decoration:none; border:2px solid transparent; transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--terracotta); color:#fff;}
+  .btn-primary:hover{background:#8a2818;}
+  .btn-outline{border-color:var(--green-dark); color:var(--green-dark); background:#fff;}
+  .btn-outline:hover{background:var(--green-tint);}
+
+  /* ============ Allgemeine Abschnitte ============ */
+  section{padding:3rem 0;}
+  section.alt{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .section-head{max-width:640px; margin-bottom:2rem;}
+  .section-head p{color:var(--ink-soft);}
+
+  /* Aufgaben-Karten */
+  .grid-cards{display:grid; grid-template-columns:repeat(4, 1fr); gap:1.1rem;}
+  @media (max-width:920px){ .grid-cards{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:560px){ .grid-cards{grid-template-columns:1fr;} }
+  .task-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1.4rem 1.3rem; box-shadow:var(--shadow);
+  }
+  .task-card .ring-bullet{width:1rem; height:1rem; border-width:3px; margin:0 0 .8rem;}
+  .task-card h3{font-size:1.05rem; margin-bottom:.4rem;}
+  .task-card p{margin:0; font-size:.92rem; color:var(--ink-soft);}
+
+  /* Termin-Teaser-Karten (Platzhalter für Phase 2) */
+  .grid-termine{display:grid; grid-template-columns:repeat(3, 1fr); gap:1.1rem;}
+  @media (max-width:900px){ .grid-termine{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:600px){ .grid-termine{grid-template-columns:1fr;} }
+  .termin-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1.2rem 1.3rem; box-shadow:var(--shadow); position:relative;
+  }
+  .termin-badge{
+    display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.03em;
+    text-transform:uppercase; padding:.22rem .6rem; border-radius:20px; margin-bottom:.7rem;
+  }
+  .termin-badge.kurs{background:var(--green-tint); color:var(--green-dark);}
+  .termin-badge.gespraech{background:var(--terracotta-t); color:var(--terracotta);}
+  .termin-card h3{font-size:1rem; margin-bottom:.5rem;}
+  .termin-meta{font-size:.88rem; color:var(--ink-soft); margin:0 0 .25rem;}
+  .termin-meta strong{color:var(--ink);}
+  .platzhalter-hinweis{
+    margin-top:1.6rem; font-size:.85rem; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:1rem;
+  }
+
+  /* Footer */
+  footer{background:var(--green-dark); color:#eef4ea; padding:2.6rem 0 1.6rem; margin-top:2rem;}
+  .footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:2rem; margin-bottom:2rem;}
+  @media (max-width:720px){ .footer-grid{grid-template-columns:1fr; gap:1.6rem;} }
+  footer h4{font-family:var(--font-display); color:#fff; font-size:.95rem; margin:0 0 .7rem;}
+  footer p, footer a{color:#dfeada; font-size:.9rem;}
+  footer a{text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  footer ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.45rem;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.15); padding-top:1.2rem;
+    display:flex; flex-wrap:wrap; gap:.6rem 1.2rem; justify-content:space-between; font-size:.8rem; color:#c9d8c3;
+  }
+  .footer-bottom a{color:#c9d8c3;}
+
+  .skip-link{
+    position:absolute; left:-999px; top:0; background:#fff; color:var(--ink); padding:.6rem 1rem; z-index:200;
+  }
+  .skip-link:focus{left:1rem; top:1rem;}
+
+  :focus-visible{outline:3px solid var(--terracotta); outline-offset:2px;}
+
+  /* ============ Infos & Grußworte ============ */
+  .info-feed{display:flex; flex-direction:column; gap:1.1rem; max-width:760px;}
+  .info-card{
+    background:var(--card); border:1px solid var(--line); border-left:4px solid var(--green-dark);
+    border-radius:var(--radius); padding:1.3rem 1.5rem; box-shadow:var(--shadow);
+  }
+  .info-card .info-date{font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--green-dark); margin-bottom:.5rem;}
+  .info-card h3{margin-bottom:.5rem; font-size:1.05rem;}
+  .info-card p{margin:0 0 .7rem; color:var(--ink-soft);}
+  .info-card .signature{font-style:italic; color:var(--ink); margin:0;}
+  .info-card.info-empty{border-left-color:var(--line); color:var(--ink-soft); font-size:.9rem; text-align:center; border-style:dashed; border-width:1.5px; box-shadow:none;}
+
+  /* Ausklappbare Infos/Grußworte (natives <details>, funktioniert ohne JS) */
+  details.info-card{padding:0; cursor:default;}
+  details.info-card summary{
+    list-style:none; cursor:pointer; padding:1.3rem 1.5rem; display:flex; flex-direction:column; gap:.3rem;
+  }
+  details.info-card summary::-webkit-details-marker{display:none;}
+  details.info-card summary .info-date{margin-bottom:.1rem;}
+  details.info-card summary h3{margin-bottom:0;}
+  details.info-card summary .read-more{
+    display:inline-flex; align-items:center; gap:.35rem; font-size:.85rem; font-weight:600;
+    color:var(--terracotta); margin-top:.3rem;
+  }
+  details.info-card summary .read-more .chevron{transition:transform .2s ease; display:inline-block;}
+  details.info-card[open] summary .read-more .chevron{transform:rotate(180deg);}
+  details.info-card[open] summary .read-more .label-closed{display:none;}
+  details.info-card:not([open]) summary .read-more .label-open{display:none;}
+  details.info-card .gruss-body{padding:0 1.5rem 1.4rem;}
+  details.info-card .gruss-body p{margin:0 0 .7rem; color:var(--ink-soft);}
+  details.info-card .gruss-body .signature{font-style:italic; color:var(--ink); margin:0;}
+  details.info-card summary:hover .read-more{text-decoration:underline;}
+
+  /* ============ Bürger im Gespräch (eigene Rubrik) ============ */
+  .buerger-section{background:var(--terracotta-t);}
+  .buerger-grid{display:grid; grid-template-columns:220px 1fr; gap:2.2rem; align-items:start;}
+  @media (max-width:720px){ .buerger-grid{grid-template-columns:1fr;} }
+  .buerger-photo{border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:4px solid #fff; max-width:220px;}
+  .buerger-photo img{width:100%; height:auto; display:block;}
+  .buerger-photo figcaption{font-size:.72rem; color:var(--ink-soft); text-align:center; margin-top:.4rem;}
+  .buerger-organisers{font-size:.85rem; color:var(--terracotta); font-weight:700; margin-bottom:.7rem;}
+  .buerger-dates{list-style:none; padding:0; margin:1.1rem 0 0; display:flex; flex-direction:column; gap:.7rem;}
+  .buerger-dates li{background:#fff; border-radius:10px; padding:.8rem 1rem; box-shadow:var(--shadow); font-size:.92rem;}
+  .buerger-dates li strong{display:block; color:var(--terracotta); font-family:var(--font-display); font-size:.98rem;}
+  .buerger-note{font-size:.85rem; color:var(--ink-soft); margin-top:1rem;}
+
+  /* ============ Seite: Terminübersicht ============ */
+  .page-hero{
+    background:linear-gradient(180deg, var(--green-tint) 0%, var(--paper) 100%);
+    padding:2.6rem 0 2rem; border-bottom:1px solid var(--line);
+  }
+  .page-hero h1{font-size:clamp(1.6rem, 3.4vw, 2.2rem); margin-bottom:.5rem;}
+  .page-hero p{color:var(--ink-soft); max-width:640px; margin:0;}
+
+  .month-filter{
+    display:flex; flex-wrap:wrap; gap:.6rem; margin:1.6rem 0 .4rem; padding:0; list-style:none;
+  }
+  .month-filter button{
+    font-family:var(--font-body); font-weight:600; font-size:.88rem; padding:.5rem 1rem;
+    border-radius:20px; border:1.5px solid var(--green-dark); background:#fff; color:var(--green-dark); cursor:pointer;
+  }
+  .month-filter button.active{background:var(--green); color:#fff;}
+  .month-filter button:hover{background:var(--green-tint);}
+  .month-filter button.active:hover{background:var(--green);}
+
+  .kat-filter{display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:2rem;}
+  .kat-filter button{
+    font-family:var(--font-body); font-size:.82rem; font-weight:600; padding:.45rem .9rem;
+    border-radius:20px; border:1.5px solid var(--line); background:#fff; color:var(--ink-soft); cursor:pointer;
+    display:inline-flex; align-items:center; gap:.4rem;
+  }
+  .kat-filter button .dot{width:.6rem; height:.6rem; border-radius:50%; display:inline-block;}
+  .kat-filter button.active{color:#fff; border-color:transparent;}
+  .kat-filter button img.chip-icon{width:1.1rem; height:1.1rem; border-radius:50%; object-fit:cover;}
+
+  .termine-liste{display:grid; grid-template-columns:repeat(2, 1fr); gap:1.2rem;}
+  @media (max-width:760px){ .termine-liste{grid-template-columns:1fr;} }
+
+  .termin-card.voll{opacity:.55; grid-column:1 / -1;}
+  .badge-row{display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:.7rem; align-items:center;}
+  .rubrik-badge{
+    display:inline-flex; align-items:center; gap:.35rem; font-size:.72rem; font-weight:700;
+    letter-spacing:.02em; text-transform:uppercase; padding:.22rem .6rem .22rem .3rem; border-radius:20px; color:#fff;
+  }
+  .rubrik-badge img{width:1.3rem; height:1.3rem; border-radius:50%; object-fit:cover; border:1.5px solid #fff;}
+  .termin-badge.gratis{background:var(--green-tint); color:var(--green-dark);}
+
+  .kurs-optionen{list-style:none; margin:.8rem 0 0; padding:0; display:flex; flex-direction:column; gap:.6rem;}
+  .kurs-optionen li{
+    border:1px solid var(--line); border-radius:10px; padding:.6rem .8rem; font-size:.85rem; background:var(--paper);
+  }
+  .kurs-optionen li .opt-title{font-weight:700; color:var(--green-dark); display:block; margin-bottom:.15rem;}
+  .kurs-preis{font-weight:700; color:var(--terracotta);}
+
+  .termin-hinweis{
+    font-size:.84rem; color:var(--ink); background:var(--terracotta-t); border-radius:8px;
+    padding:.55rem .75rem; margin:.7rem 0 0;
+  }
+
+  .termin-card .card-footer{
+    margin-top:1rem; padding-top:.9rem; border-top:1px dashed var(--line);
+    display:flex; align-items:center; justify-content:space-between; gap:.6rem; flex-wrap:wrap;
+  }
+  .termin-card .btn{padding:.5rem 1rem; font-size:.85rem;}
+  .keine-anmeldung{font-size:.8rem; color:var(--ink-soft); font-style:italic;}
+
+  .leer-hinweis{
+    text-align:center; color:var(--ink-soft); padding:2.5rem 1rem; border:1.5px dashed var(--line);
+    border-radius:var(--radius); grid-column:1 / -1;
+  }
+
+  /* ============ Seite: Anmeldung / Abmeldung ============ */
+  .anmelde-tabs{display:flex; gap:.6rem; margin-bottom:2rem;}
+  .anmelde-tabs button{
+    flex:1; font-family:var(--font-display); font-weight:600; font-size:1rem; padding:.9rem 1rem;
+    border-radius:var(--radius); border:1.5px solid var(--line); background:#fff; color:var(--ink-soft); cursor:pointer;
+  }
+  .anmelde-tabs button.active{background:var(--green-dark); border-color:var(--green-dark); color:#fff;}
+
+  .panel-box{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1.6rem 1.7rem; box-shadow:var(--shadow); max-width:640px;
+  }
+  .panel-hidden{display:none;}
+
+  .kurs-auswahl-info{
+    background:var(--green-tint); border-radius:12px; padding:1rem 1.2rem; margin-bottom:1.4rem;
+  }
+  .kurs-auswahl-info h3{font-size:1.05rem; margin-bottom:.4rem;}
+  .kurs-auswahl-info p{margin:.15rem 0; font-size:.9rem; color:var(--ink-soft);}
+  .kurs-auswahl-info a.wechseln{font-size:.82rem; font-weight:600;}
+
+  .feld{margin-bottom:1.1rem;}
+  .feld label{display:block; font-weight:600; font-size:.88rem; margin-bottom:.3rem;}
+  .feld input[type=text], .feld input[type=email], .feld input[type=tel], .feld select{
+    width:100%; padding:.65rem .8rem; border:1.5px solid var(--line); border-radius:8px;
+    font-family:var(--font-body); font-size:.95rem; background:#fff;
+  }
+  .feld input:focus, .feld select:focus{border-color:var(--green-dark); outline:none;}
+  .feld-zwei{display:grid; grid-template-columns:1fr 1fr; gap:1rem;}
+  @media (max-width:520px){ .feld-zwei{grid-template-columns:1fr;} }
+
+  .termin-optionen-auswahl{list-style:none; margin:0 0 1.3rem; padding:0; display:flex; flex-direction:column; gap:.6rem;}
+  .termin-optionen-auswahl li{border:1.5px solid var(--line); border-radius:10px; padding:.7rem .9rem;}
+  .termin-optionen-auswahl label{display:flex; align-items:flex-start; gap:.6rem; font-weight:400; cursor:pointer;}
+  .termin-optionen-auswahl input[type=radio]{margin-top:.25rem;}
+  .termin-optionen-auswahl .opt-text strong{display:block; color:var(--green-dark); font-family:var(--font-display); font-size:.95rem;}
+  .termin-optionen-auswahl .opt-text span{font-size:.85rem; color:var(--ink-soft);}
+
+  .datenschutz-zeile{display:flex; align-items:flex-start; gap:.6rem; font-size:.85rem; color:var(--ink-soft); margin-bottom:1.3rem;}
+  .datenschutz-zeile input{margin-top:.2rem;}
+
+  .fehler-text{color:var(--terracotta); font-size:.85rem; margin:-.6rem 0 1rem; display:none;}
+  .fehler-text.zeigen{display:block;}
+
+  .bestaetigung{
+    background:var(--green-tint); border:1.5px solid var(--green-dark); border-radius:var(--radius);
+    padding:1.5rem 1.7rem;
+  }
+  .bestaetigung .anmelde-id{
+    font-family:var(--font-display); font-size:1.4rem; font-weight:700; color:var(--green-dark);
+    background:#fff; display:inline-block; padding:.4rem 1rem; border-radius:8px; margin:.6rem 0 1rem; letter-spacing:.03em;
+  }
+  .bestaetigung p{margin:.3rem 0; font-size:.92rem;}
+
+  .abmelde-feld-wrap{display:none; margin-bottom:1.1rem;}
+  .abmelde-feld-wrap.zeigen{display:block;}
+
+  .demo-hinweis{
+    font-size:.82rem; color:var(--ink-soft); background:var(--terracotta-t); border-radius:8px;
+    padding:.7rem 1rem; margin-top:1.5rem;
+  }
+
+  /* ============ Gemeinsame Personen-Kachel ============
+     Wird für Vorstands-Kacheln UND Vereins-Ansprechpartner verwendet,
+     damit alle Personendaten auf der Seite einheitlich aussehen.
+     Es werden nur tatsächlich vorhandene Felder angezeigt. */
+  .person-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1.3rem 1.4rem; box-shadow:var(--shadow);
+  }
+  .person-card .person-name{font-size:1.05rem; margin-bottom:.15rem;}
+  .person-card .person-funktion{
+    font-size:.76rem; font-weight:700; text-transform:uppercase; letter-spacing:.03em;
+    color:var(--terracotta); margin-bottom:.5rem; display:block;
+  }
+  .person-card .person-kontakt{font-size:.87rem; color:var(--ink-soft); margin:0; line-height:1.7;}
+  .person-card .person-kontakt a{color:var(--green-dark); text-decoration:none;}
+  .person-card .person-kontakt a:hover{text-decoration:underline;}
+
+  /* Vereins-Kachel: Vereinsname + ein oder mehrere Ansprechpartner-Blöcke */
+  .vereine-liste, .personen-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1.1rem;}
+  @media (max-width:960px){ .vereine-liste, .personen-grid{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:640px){ .vereine-liste, .personen-grid{grid-template-columns:1fr;} }
+
+  .verein-card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:1.3rem 1.4rem; box-shadow:var(--shadow);
+  }
+  .verein-card h3{font-size:1.05rem; margin-bottom:.9rem; padding-bottom:.7rem; border-bottom:1px solid var(--line);}
+  .verein-ansprechpartner{margin-bottom:.9rem;}
+  .verein-ansprechpartner:last-child{margin-bottom:0;}
+  .verein-ansprechpartner .person-funktion{margin-bottom:.3rem;}
+  .verein-ansprechpartner .person-name{font-size:.95rem; font-weight:600; margin-bottom:.1rem; display:block;}
+  .verein-ansprechpartner .person-kontakt{font-size:.85rem;}
+
+  .vereine-intro-box{
+    background:var(--green-tint); border-radius:var(--radius); padding:1.4rem 1.6rem; margin-bottom:2.2rem; max-width:760px;
+  }
+  .vereine-intro-box p{margin:.3rem 0; color:var(--ink-soft);}
+  .vereine-intro-box p:first-child{margin-top:0;}
+  .vereine-intro-box a{font-weight:600;}
+
+  /* ============ Rechtstexte (Impressum / Datenschutz) ============ */
+  .rechtstext{max-width:800px;}
+  .rechtstext h2{font-size:1.3rem; margin-top:2.2rem; margin-bottom:.7rem;}
+  .rechtstext h2:first-child{margin-top:0;}
+  .rechtstext h3{font-size:1.05rem; margin-top:1.4rem; margin-bottom:.4rem; color:var(--ink);}
+  .rechtstext p, .rechtstext li{color:var(--ink-soft); font-size:.95rem; line-height:1.65;}
+  .rechtstext ul{padding-left:1.3rem; margin:.5rem 0 1rem;}
+  .rechtstext strong{color:var(--ink);}
+  .platzhalter-warnung{
+    background:var(--terracotta-t); border:1px solid var(--terracotta); border-radius:8px;
+    padding:.6rem .9rem; font-size:.85rem; color:var(--terracotta); margin:.6rem 0 1.2rem; font-weight:600;
+  }
+
+  /* ============ Downloadbereich ============ */
+  .flyer-aktuell{
+    display:flex; gap:1.6rem; align-items:center; background:var(--card); border:1px solid var(--line);
+    border-radius:var(--radius); padding:1.6rem; box-shadow:var(--shadow); max-width:680px; margin-bottom:2rem;
+  }
+  .flyer-aktuell .flyer-icon{
+    flex:none; width:64px; height:64px; border-radius:12px; background:var(--green-tint);
+    display:flex; align-items:center; justify-content:center; font-size:1.8rem;
+  }
+  .flyer-aktuell h3{margin-bottom:.2rem;}
+  .flyer-aktuell .flyer-meta{font-size:.85rem; color:var(--ink-soft); margin:0 0 .8rem;}
+  .flyer-badge-aktuell{
+    display:inline-block; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.03em;
+    background:var(--green-tint); color:var(--green-dark); padding:.2rem .6rem; border-radius:20px; margin-bottom:.5rem;
+  }
+
+  .archiv-liste{list-style:none; margin:0; padding:0; max-width:680px; display:flex; flex-direction:column; gap:.7rem;}
+  .archiv-liste li{
+    display:flex; justify-content:space-between; align-items:center; gap:1rem;
+    background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.8rem 1.1rem; font-size:.9rem;
+  }
+  .archiv-liste .archiv-datum{color:var(--ink-soft); font-size:.85rem;}
+  .archiv-leer{color:var(--ink-soft); font-size:.9rem; font-style:italic;}
+  .hinweisbox{
+    background:var(--green-tint); border-radius:var(--radius); padding:1.2rem 1.4rem; margin-bottom:2rem; font-size:.88rem; color:var(--ink-soft);
+  }
