@@ -64,27 +64,8 @@
         <p>Hier veröffentlicht der Vorstand aktuelle Hinweise und Grußworte an die Schubyerinnen und Schubyer.</p>
       </div>
 
-      <div class="info-feed">
-        <details class="info-card">
-          <summary>
-            <span class="info-date">Grußwort des 1. Vorsitzenden</span>
-            <h3>Liebe Schubyerinnen und Schubyer,</h3>
-            <span class="read-more">
-              <span class="label-closed">Grußwort lesen</span>
-              <span class="label-open">Grußwort schließen</span>
-              <span class="chevron">⌄</span>
-            </span>
-          </summary>
-          <div class="gruss-body">
-            <p>wir danken Ihnen für die zahlreichen Besuche unserer Veranstaltungen und unserer Weiterbildungsangebote. Nehmen Sie sich auch ein wenig Zeit, um sich unser aktuelles, abwechslungsreiches Programm anzuschauen — wir freuen uns auf Ihre Teilnahme!</p>
-            <p>Ich möchte mich außerdem bei den Organisatorinnen und Organisatoren von „Bürger im Gespräch" bedanken. Ich freue mich, dass es gelungen ist, diese Veranstaltungsreihe wieder zu beleben.</p>
-            <p class="signature">Volker Hagge Ellhöft, 1. Vorsitzender</p>
-          </div>
-        </details>
-
-        <div class="info-card info-empty">
-          Weitere Infos und Ankündigungen folgen an dieser Stelle — der Vorstand pflegt diese Rubrik über das Pflegetool.
-        </div>
+      <div class="info-feed" id="infoFeedListe">
+        <!-- wird per JavaScript aus assets/infos-daten.js befüllt -->
       </div>
     </div>
   </section>
@@ -123,7 +104,7 @@
     </div>
   </section>
 
-  <!-- ============ TERMINÜBERSICHT (Platzhalter, Phase 2) ============ -->
+  <!-- ============ TERMINÜBERSICHT (Startseiten-Vorschau) ============ -->
   <section class="alt" id="termine">
     <div class="container">
       <div class="section-head">
@@ -132,28 +113,8 @@
         <p>Ein Auszug aktueller Angebote. Kurstitel, Kursbeginn und Kursleitung sind auf einen Blick sichtbar — mit direktem Weg zur Anmeldung.</p>
       </div>
 
-      <div class="grid-termine">
-        <div class="termin-card">
-          <span class="termin-badge kurs">Kurs</span>
-          <h3>Wir bleiben in Bewegung mit Wassergymnastik</h3>
-          <p class="termin-meta"><strong>Start:</strong> Di. 09.09.25, 13:45 Uhr</p>
-          <p class="termin-meta"><strong>Kursleitung:</strong> Clarissa Preußer</p>
-          <p class="termin-meta"><strong>Ort:</strong> Schwimmhalle Schleswig</p>
-        </div>
-        <div class="termin-card">
-          <span class="termin-badge kurs">Kurs</span>
-          <h3>Musikalische Früherziehung</h3>
-          <p class="termin-meta"><strong>Start:</strong> Mo. 15.09.25, 15:30 Uhr</p>
-          <p class="termin-meta"><strong>Kursleitung:</strong> Diana Marten</p>
-          <p class="termin-meta"><strong>Ort:</strong> Musikraum Grundschule Schuby</p>
-        </div>
-        <div class="termin-card">
-          <span class="termin-badge kurs">Kurs</span>
-          <h3>Physiosport für den Rücken</h3>
-          <p class="termin-meta"><strong>Start:</strong> Mo. 22.09.25, 16:30 Uhr</p>
-          <p class="termin-meta"><strong>Kursleitung:</strong> Martina Henningsen</p>
-          <p class="termin-meta"><strong>Ort:</strong> Schule Schuby</p>
-        </div>
+      <div class="grid-termine" id="startseiteTermineListe">
+        <!-- wird per JavaScript aus assets/daten.js befüllt: die 3 nächsten anstehenden Kurse -->
       </div>
 
       <p class="platzhalter-hinweis"><a href="termine.html">Alle Kurse und Termine mit Monatsfilter ansehen →</a></p>
@@ -211,39 +172,8 @@
         <p>Bei Fragen rund um Kurse, Termine oder die Vereinsarbeit wenden Sie sich gerne an den Vorstand.</p>
       </div>
 
-      <div class="personen-grid">
-        <div class="person-card">
-          <span class="person-name">Volker Hagge Ellhöft</span>
-          <span class="person-funktion">1. Vorsitzender</span>
-          <p class="person-kontakt"><a href="tel:949432">949432</a></p>
-        </div>
-        <div class="person-card">
-          <span class="person-name">Anka Mees</span>
-          <span class="person-funktion">2. Vorsitzende</span>
-          <p class="person-kontakt"><a href="tel:01717053430">0171 7053430</a></p>
-        </div>
-        <div class="person-card">
-          <span class="person-name">Heike Pöschel</span>
-          <span class="person-funktion">Kassenwart</span>
-          <p class="person-kontakt"><a href="tel:015142221931">0151 42221931</a></p>
-        </div>
-        <div class="person-card">
-          <span class="person-name">Anneke Hinz</span>
-          <span class="person-funktion">Schriftwart</span>
-          <p class="person-kontakt"><a href="tel:016098778104">0160 98778104</a></p>
-        </div>
-        <div class="person-card">
-          <span class="person-name">Detlef Scherer</span>
-          <span class="person-funktion">Beisitzer</span>
-        </div>
-        <div class="person-card">
-          <span class="person-name">Rolf Murst</span>
-          <span class="person-funktion">Beisitzer</span>
-        </div>
-        <div class="person-card">
-          <span class="person-name">Sina Schade</span>
-          <span class="person-funktion">Beisitzerin</span>
-        </div>
+      <div class="personen-grid" id="vorstandListe">
+        <!-- wird per JavaScript aus assets/vorstand-daten.js befüllt -->
       </div>
     </div>
   </section>
@@ -256,7 +186,7 @@
       <div>
         <h4>OrtsKulturRing Schuby e.V.</h4>
         <p>Lürschauer Weg<br>24850 Schuby</p>
-        <p>E-Mail: <a href="mailto:okr.schuby@gmail.com">okr.schuby@gmail.com</a></p>
+        <p>E-Mail: <a href="mailto:okrschuby@gmail.com">okrschuby@gmail.com</a></p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -286,6 +216,8 @@
 
 <script src="assets/daten.js"></script>
 <script src="assets/termin-karten.js"></script>
+<script src="assets/vorstand-daten.js"></script>
+<script src="assets/infos-daten.js"></script>
 <script>
   const toggle = document.getElementById('navToggle');
   const nav = document.getElementById('mainNav');
@@ -302,6 +234,64 @@
   // "Bürger im Gespräch"-Termine als dieselbe Kachel wie in der Terminübersicht anzeigen
   const buergerTermine = TERMINE.filter(t => t.typ === "veranstaltung" && t.veranstaltungsart === "buerger");
   document.getElementById('buergerTermineListe').innerHTML = buergerTermine.map(kartenHtml).join("");
+
+  // Terminvorschau auf der Startseite: die 3 zeitlich nächsten Kurse (frühester Termin zuerst)
+  function fruehesterStartTermin(t){
+    return t.optionen.map(o => o.start).sort()[0];
+  }
+  const naechsteKurse = TERMINE
+    .filter(t => t.typ === "kurs")
+    .sort((a, b) => fruehesterStartTermin(a).localeCompare(fruehesterStartTermin(b)))
+    .slice(0, 3);
+  const startseiteListeEl = document.getElementById('startseiteTermineListe');
+  if (naechsteKurse.length) {
+    startseiteListeEl.innerHTML = naechsteKurse.map(kartenHtml).join("");
+  } else {
+    startseiteListeEl.innerHTML = '<div class="leer-hinweis">Aktuell sind keine Kurse hinterlegt.</div>';
+  }
+
+  // Vorstands-Kacheln (nur vorhandene Felder anzeigen)
+  function personKartenHtml(p){
+    let kontaktHtml = "";
+    if (p.telefon) {
+      const telHref = p.telefon.replace(/[^\d+]/g, "");
+      kontaktHtml += `<a href="tel:${telHref}">${p.telefon}</a>`;
+    }
+    if (p.email) {
+      kontaktHtml += (kontaktHtml ? "<br>" : "") + `<a href="mailto:${p.email}">${p.email}</a>`;
+    }
+    return `
+      <div class="person-card">
+        <span class="person-name">${p.name}</span>
+        <span class="person-funktion">${p.funktion}</span>
+        ${kontaktHtml ? `<p class="person-kontakt">${kontaktHtml}</p>` : ""}
+      </div>`;
+  }
+  document.getElementById('vorstandListe').innerHTML = VORSTAND.map(personKartenHtml).join("");
+
+  // Infos/Grußworte als ausklappbare Karten (gleiches <details>-Muster wie zuvor fest im HTML)
+  function infoKarteHtml(info){
+    const absaetze = info.text.split("\n\n").map(t => `<p>${t}</p>`).join("");
+    return `
+      <details class="info-card">
+        <summary>
+          <span class="info-date">${info.label || ""}</span>
+          <h3>${info.ueberschrift}</h3>
+          <span class="read-more">
+            <span class="label-closed">Grußwort lesen</span>
+            <span class="label-open">Grußwort schließen</span>
+            <span class="chevron">⌄</span>
+          </span>
+        </summary>
+        <div class="gruss-body">
+          ${absaetze}
+          ${info.unterschrift ? `<p class="signature">${info.unterschrift}</p>` : ""}
+        </div>
+      </details>`;
+  }
+  const infoFeedEl = document.getElementById('infoFeedListe');
+  infoFeedEl.innerHTML = INFOS.map(infoKarteHtml).join("") +
+    '<div class="info-card info-empty">Weitere Infos und Ankündigungen folgen an dieser Stelle — der Vorstand pflegt diese Rubrik über das Pflegetool.</div>';
 </script>
 
 </body>
