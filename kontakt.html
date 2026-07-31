@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Kontakt – OrtsKulturRing Schuby e.V.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nehmen Sie Kontakt mit dem OrtsKulturRing Schuby e.V. auf.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="nav-row">
+    <a class="brand" href="index.html">
+      <img src="assets/wappen-schuby.png" alt="Wappen der Gemeinde Schuby">
+      <span class="brand-text">OrtsKulturRing Schuby e.V.<small>Kulturpflege &amp; Weiterbildung in Schuby</small></span>
+    </a>
+    <button class="hamburger" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Start</a>
+      <a href="index.html#infos">Infos &amp; Grußworte</a>
+      <a href="index.html#aufgaben">Über uns</a>
+      <a href="termine.html">Termine</a>
+      <a href="vereine.html">Vereine</a>
+      <a href="index.html#vorstand">Vorstand</a>
+      <a href="anmeldung.html" class="cta">Kurs anmelden</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-eyebrow"><span class="ring-bullet"></span>Kontakt</div>
+      <h1>Nehmen Sie Kontakt mit uns auf</h1>
+      <p>Fragen zu Kursen, Terminen oder der Vereinsarbeit? Schreiben Sie uns – wir melden uns bei Ihnen.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="panel-box" id="panelKontakt">
+        <form id="formKontakt" novalidate>
+          <div class="feld-zwei">
+            <div class="feld">
+              <label for="kName">Name *</label>
+              <input type="text" id="kName" required>
+            </div>
+            <div class="feld">
+              <label for="kEmail">E-Mail-Adresse *</label>
+              <input type="email" id="kEmail" required>
+            </div>
+          </div>
+
+          <div class="feld">
+            <label for="kThema">Thema</label>
+            <select id="kThema">
+              <option value="Allgemeine Frage">Allgemeine Frage</option>
+              <option value="Kurse">Kurse</option>
+              <option value="Bürger im Gespräch">Bürger im Gespräch</option>
+              <option value="Vereine">Vereine</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+          </div>
+
+          <div class="feld">
+            <label for="kNachricht">Ihre Nachricht *</label>
+            <textarea id="kNachricht" rows="6" required style="width:100%; padding:.65rem .8rem; border:1.5px solid var(--line); border-radius:8px; font-family:var(--font-body); font-size:.95rem;"></textarea>
+          </div>
+
+          <p class="fehler-text" id="kontaktFehler">Bitte füllen Sie alle Pflichtfelder aus.</p>
+
+          <div class="datenschutz-zeile">
+            <input type="checkbox" id="kDatenschutzOk" required>
+            <label for="kDatenschutzOk">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage einverstanden. *</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Nachricht senden</button>
+        </form>
+
+        <div class="bestaetigung" id="kontaktBestaetigung" style="display:none;">
+          <h3>Danke für Ihre Nachricht!</h3>
+          <p>Wir haben Ihre Nachricht erhalten und melden uns so schnell wie möglich bei Ihnen.</p>
+        </div>
+
+        <p class="demo-hinweis" id="kontaktHinweis">Hinweis: Dies ist aktuell eine Design-Vorschau. Die Nachricht wird noch nicht verschickt — das folgt mit der Anbindung an das Anmelde-Backend (siehe Phase 4).</p>
+      </div>
+
+      <div class="hinweisbox">
+        Sie erreichen uns auch direkt per E-Mail: <a href="mailto:okr.schuby@gmail.com">okr.schuby@gmail.com</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>OrtsKulturRing Schuby e.V.</h4>
+        <p>Lürschauer Weg<br>24850 Schuby</p>
+        <p>E-Mail: <a href="mailto:okr.schuby@gmail.com">okr.schuby@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#aufgaben">Über uns</a></li>
+          <li><a href="termine.html">Termine</a></li>
+          <li><a href="vereine.html">Vereine</a></li>
+          <li><a href="anmeldung.html">Kurs anmelden</a></li>
+          <li><a href="downloads.html">Flyer &amp; Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OrtsKulturRing Schuby e.V. — 1. Vorsitzender: Volker Hagge Ellhöft</span>
+      <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ---------- Navigation (Hamburger) ---------- */
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  /* ---------- Verbindung zum Backend (gleiche Konfiguration wie anmeldung.html) ---------- */
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzfu-A0tT2ECfKslD_I193fm7Jp8F4sRIZ-jNpZhvSwDTXESxtmNAd2fu6cnLxDtHqJ/exec"; // <-- hier die /exec-URL einfügen (gleiche wie in anmeldung.html)
+  const BACKEND_AKTIV = APPS_SCRIPT_URL.trim().length > 0;
+
+  if (BACKEND_AKTIV) {
+    document.getElementById('kontaktHinweis').textContent =
+      "Ihre Nachricht wird jetzt echt per E-Mail an den OKR Schuby versendet.";
+  }
+
+  document.getElementById('formKontakt').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const name = document.getElementById('kName').value.trim();
+    const email = document.getElementById('kEmail').value.trim();
+    const thema = document.getElementById('kThema').value;
+    const nachricht = document.getElementById('kNachricht').value.trim();
+    const datenschutzOk = document.getElementById('kDatenschutzOk').checked;
+
+    const fehlerEl = document.getElementById('kontaktFehler');
+    const gueltig = name && email && nachricht && datenschutzOk;
+    fehlerEl.classList.toggle('zeigen', !gueltig);
+    if (!gueltig) return;
+
+    const submitBtn = this.querySelector('button[type=submit]');
+    submitBtn.disabled = true;
+
+    if (BACKEND_AKTIV) {
+      try {
+        const res = await fetch(APPS_SCRIPT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({ action: "kontakt", name, email, thema, nachricht })
+        });
+        const antwort = await res.json();
+        if (!antwort.ok) {
+          fehlerEl.textContent = antwort.error || "Nachricht konnte leider nicht gesendet werden.";
+          fehlerEl.classList.add('zeigen');
+          submitBtn.disabled = false;
+          return;
+        }
+      } catch (err) {
+        fehlerEl.textContent = "Verbindung zum Server fehlgeschlagen. Bitte versuchen Sie es später erneut oder schreiben Sie uns direkt per E-Mail.";
+        fehlerEl.classList.add('zeigen');
+        submitBtn.disabled = false;
+        return;
+      }
+    }
+
+    this.style.display = "none";
+    document.getElementById('kontaktBestaetigung').style.display = "block";
+  });
+</script>
+
+</body>
+</html>

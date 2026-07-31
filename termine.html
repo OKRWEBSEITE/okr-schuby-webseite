@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Terminübersicht – OrtsKulturRing Schuby e.V.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Alle Kurse, allgemeinen Termine und Bürger-im-Gespräch-Abende des OrtsKulturRing Schuby e.V. nach Monat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="nav-row">
+    <a class="brand" href="index.html">
+      <img src="assets/wappen-schuby.png" alt="Wappen der Gemeinde Schuby">
+      <span class="brand-text">OrtsKulturRing Schuby e.V.<small>Kulturpflege &amp; Weiterbildung in Schuby</small></span>
+    </a>
+
+    <button class="hamburger" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Start</a>
+      <a href="index.html#infos">Infos &amp; Grußworte</a>
+      <a href="index.html#aufgaben">Über uns</a>
+      <a href="termine.html">Termine</a>
+      <a href="vereine.html">Vereine</a>
+      <a href="index.html#buerger-im-gespraech">Bürger im Gespräch</a>
+      <a href="index.html#vorstand">Vorstand</a>
+      <a href="anmeldung.html" class="cta">Kurs anmelden</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-eyebrow"><span class="ring-bullet"></span>Terminübersicht</div>
+      <h1>Alle Kurse und Termine auf einen Blick</h1>
+      <p>Wähle einen Monat, um zu sehen, welche Kurse, allgemeinen Termine und „Bürger im Gespräch"-Abende dann anstehen. Jede Kachel zeigt Kursbeginn, Kursleitung und Ort.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <ul class="month-filter" id="monthFilter" role="group" aria-label="Nach Monat filtern"></ul>
+      <div class="kat-filter" id="katFilter" role="group" aria-label="Nach Kategorie filtern">
+        <!-- wird per JavaScript aus RUBRIK_META / VERANSTALTUNG_META befüllt -->
+      </div>
+
+      <div class="termine-liste" id="termineListe">
+        <!-- wird per JavaScript befüllt -->
+      </div>
+
+      <p class="platzhalter-hinweis">Hinweis: Diese Übersicht zeigt aktuell noch Beispieldaten aus der Kursliste 2. Halbjahr 2025. Ab Phase&nbsp;4 werden hier die echten, laufend aktualisierten Daten aus Google Sheets angezeigt.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>OrtsKulturRing Schuby e.V.</h4>
+        <p>Lürschauer Weg<br>24850 Schuby</p>
+        <p>E-Mail: <a href="mailto:okr.schuby@gmail.com">okr.schuby@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#aufgaben">Über uns</a></li>
+          <li><a href="termine.html">Termine</a></li>
+          <li><a href="vereine.html">Vereine</a></li>
+          <li><a href="anmeldung.html">Kurs anmelden</a></li>
+          <li><a href="downloads.html">Flyer &amp; Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OrtsKulturRing Schuby e.V. — 1. Vorsitzender: Volker Hagge Ellhöft</span>
+      <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/daten.js"></script>
+<script src="assets/termin-karten.js"></script>
+<script>
+  /* ---------- Navigation (Hamburger) ---------- */
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  /* ---------- Terminübersicht: Daten aufbereiten ---------- */
+  const MONATSNAMEN = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+
+  function fruehesterStart(termin){
+    return termin.optionen.map(o => o.start).sort()[0];
+  }
+  function monatSchluessel(datumStr){
+    const d = new Date(datumStr + "T00:00:00");
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+  }
+  // formatDatum, terminKatKey, rubrikMetaFuer, badgeHtml, kartenHtml
+  // kommen jetzt gemeinsam genutzt aus assets/termin-karten.js
+
+  // Verfügbare Monate aus den Daten ableiten (keine Monate ohne Termine anzeigen)
+  const monateVorhanden = [...new Set(TERMINE.map(t => monatSchluessel(fruehesterStart(t))))].sort();
+
+  let aktMonat = monateVorhanden[0] || null;
+  let aktKat = "alle";
+
+  const monthFilterEl = document.getElementById('monthFilter');
+  monateVorhanden.forEach(m => {
+    const [jahr, monatNr] = m.split("-");
+    const li = document.createElement('li');
+    const btn = document.createElement('button');
+    btn.textContent = MONATSNAMEN[parseInt(monatNr,10)-1] + " " + jahr;
+    btn.dataset.monat = m;
+    btn.className = (m === aktMonat) ? "active" : "";
+    btn.addEventListener('click', () => { aktMonat = m; render(); updateActiveButtons(); });
+    li.appendChild(btn);
+    monthFilterEl.appendChild(li);
+  });
+
+  /* ---------- Kategorie-Filter aus RUBRIK_META / VERANSTALTUNG_META aufbauen ---------- */
+  const katFilterEl = document.getElementById('katFilter');
+
+  function addKatButton(key, label, farbe, icon){
+    const btn = document.createElement('button');
+    btn.dataset.kat = key;
+    if (icon) {
+      btn.innerHTML = `<img class="chip-icon" src="${icon}" alt="">${label}`;
+    } else {
+      btn.innerHTML = `<span class="dot" style="background:${farbe}"></span>${label}`;
+    }
+    btn.addEventListener('click', () => { aktKat = key; render(); updateActiveButtons(); });
+    if (key === "alle") { btn.style.background = "var(--ink)"; }
+    katFilterEl.appendChild(btn);
+    return btn;
+  }
+
+  const alleBtn = document.createElement('button');
+  alleBtn.textContent = "Alle";
+  alleBtn.dataset.kat = "alle";
+  alleBtn.className = "active";
+  alleBtn.addEventListener('click', () => { aktKat = "alle"; render(); updateActiveButtons(); });
+  katFilterEl.appendChild(alleBtn);
+
+  Object.entries(RUBRIK_META).forEach(([key, meta]) => addKatButton("kurs:" + key, meta.label, meta.farbe, meta.icon));
+  Object.entries(VERANSTALTUNG_META).forEach(([key, meta]) => addKatButton("veranstaltung:" + key, meta.label, meta.farbe));
+
+  function updateActiveButtons(){
+    monthFilterEl.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.monat === aktMonat));
+    katFilterEl.querySelectorAll('button').forEach(b => {
+      const active = b.dataset.kat === aktKat;
+      b.classList.toggle('active', active);
+      if (active && b.dataset.kat !== "alle") {
+        const meta = b.dataset.kat.startsWith("kurs:") ? RUBRIK_META[b.dataset.kat.slice(5)] : VERANSTALTUNG_META[b.dataset.kat.slice(14)];
+        b.style.background = meta.farbe;
+      } else if (b.dataset.kat !== "alle") {
+        b.style.background = "";
+      }
+    });
+  }
+
+  function render(){
+    const liste = document.getElementById('termineListe');
+    const gefiltert = TERMINE.filter(t => {
+      const passtMonat = aktMonat ? t.optionen.some(o => monatSchluessel(o.start) === aktMonat) : true;
+      const passtKat = aktKat === "alle" || terminKatKey(t) === aktKat;
+      return passtMonat && passtKat;
+    });
+
+    if (gefiltert.length === 0) {
+      liste.innerHTML = `<div class="leer-hinweis">Für diese Auswahl sind aktuell keine Termine hinterlegt.</div>`;
+      return;
+    }
+    liste.innerHTML = gefiltert.map(kartenHtml).join("");
+  }
+
+  updateActiveButtons();
+  render();
+</script>
+
+</body>
+</html>

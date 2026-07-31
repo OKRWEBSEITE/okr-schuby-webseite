@@ -1,0 +1,437 @@
+1zGeteL8g5ausx0D3BnZB5ysmseToZk5E8W1avte_abc<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Kurs an- und abmelden – OrtsKulturRing Schuby e.V.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zur Kurs-Anmeldung und -Abmeldung beim OrtsKulturRing Schuby e.V.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="nav-row">
+    <a class="brand" href="index.html">
+      <img src="assets/wappen-schuby.png" alt="Wappen der Gemeinde Schuby">
+      <span class="brand-text">OrtsKulturRing Schuby e.V.<small>Kulturpflege &amp; Weiterbildung in Schuby</small></span>
+    </a>
+    <button class="hamburger" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Start</a>
+      <a href="index.html#infos">Infos &amp; Grußworte</a>
+      <a href="index.html#aufgaben">Über uns</a>
+      <a href="termine.html">Termine</a>
+      <a href="vereine.html">Vereine</a>
+      <a href="index.html#buerger-im-gespraech">Bürger im Gespräch</a>
+      <a href="index.html#vorstand">Vorstand</a>
+      <a href="anmeldung.html" class="cta">Kurs anmelden</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-eyebrow"><span class="ring-bullet"></span>Anmeldung</div>
+      <h1>Kurs anmelden oder abmelden</h1>
+      <p>Melde dich hier direkt für einen Kurs an oder mit deiner Anmelde-ID wieder ab.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="anmelde-tabs" role="tablist">
+        <button id="tabAnmelden" class="active" role="tab" aria-selected="true">Anmelden</button>
+        <button id="tabAbmelden" role="tab" aria-selected="false">Abmelden</button>
+      </div>
+
+      <!-- ============ PANEL: ANMELDEN ============ -->
+      <div class="panel-box" id="panelAnmelden">
+
+        <div id="kursAuswahlInfo" class="kurs-auswahl-info" style="display:none;">
+          <h3 id="ausgewaehlterKursTitel"></h3>
+          <p id="ausgewaehlterKursMeta"></p>
+          <p id="ausgewaehlterKursBeschreibung"></p>
+          <a href="#" class="wechseln" id="andererKursLink">Anderen Kurs wählen</a>
+        </div>
+
+        <form id="formAnmelden" novalidate>
+          <div class="feld" id="feldKursauswahl">
+            <label for="kursSelect">Kurs auswählen</label>
+            <select id="kursSelect" required></select>
+          </div>
+
+          <div id="feldTerminoptionen"></div>
+
+          <div class="feld-zwei">
+            <div class="feld">
+              <label for="vorname">Vorname *</label>
+              <input type="text" id="vorname" required>
+            </div>
+            <div class="feld">
+              <label for="nachname">Nachname *</label>
+              <input type="text" id="nachname" required>
+            </div>
+          </div>
+          <div class="feld-zwei">
+            <div class="feld">
+              <label for="telefon">Telefonnummer *</label>
+              <input type="tel" id="telefon" required>
+            </div>
+            <div class="feld">
+              <label for="email">E-Mail-Adresse *</label>
+              <input type="email" id="email" required>
+            </div>
+          </div>
+
+          <p class="fehler-text" id="anmeldenFehler">Bitte fülle alle Pflichtfelder aus und wähle einen Termin.</p>
+
+          <div class="datenschutz-zeile">
+            <input type="checkbox" id="datenschutzOk" required>
+            <label for="datenschutzOk">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Kursanmeldung einverstanden. *</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Jetzt anmelden</button>
+        </form>
+
+        <div class="bestaetigung" id="anmeldeBestaetigung" style="display:none;">
+          <h3>Anmeldung erfolgreich!</h3>
+          <p>Du bist angemeldet für:</p>
+          <p><strong id="bestaetigungKursTitel"></strong></p>
+          <p id="bestaetigungTermin"></p>
+          <p>Deine Anmelde-ID (bitte notieren – du brauchst sie für eine Abmeldung):</p>
+          <span class="anmelde-id" id="bestaetigungId"></span>
+          <p>Eine Bestätigung wurde außerdem an deine E-Mail-Adresse gesendet.</p>
+        </div>
+
+        <p class="demo-hinweis" id="anmeldenHinweis">Hinweis: Dies ist aktuell eine Design-Vorschau (Phase 3). Die Anmeldung wird noch nicht dauerhaft gespeichert und keine echte E-Mail verschickt — das folgt in Phase 4 mit der Anbindung an Google Sheets.</p>
+      </div>
+
+      <!-- ============ PANEL: ABMELDEN ============ -->
+      <div class="panel-box panel-hidden" id="panelAbmelden">
+        <p>Du möchtest dich von einem Kurs abmelden? Klicke auf „Abmelden" und gib deine Anmelde-ID ein, die du bei der Anmeldung erhalten hast.</p>
+
+        <form id="formAbmelden">
+          <div class="abmelde-feld-wrap" id="abmeldeFeldWrap">
+            <div class="feld">
+              <label for="abmeldeId">Deine Anmelde-ID</label>
+              <input type="text" id="abmeldeId" placeholder="z. B. OKR-2025-2-01-A004">
+            </div>
+          </div>
+          <p class="fehler-text" id="abmeldenFehler">Diese Anmelde-ID wurde nicht gefunden. Bitte prüfe die Eingabe.</p>
+          <button type="button" class="btn btn-primary" id="btnAbmelden">Abmelden</button>
+        </form>
+
+        <div class="bestaetigung" id="abmeldeBestaetigung" style="display:none;">
+          <h3>Abmeldung erfolgreich!</h3>
+          <p>Du wurdest von deinem Kurs abgemeldet. Dein Platz steht jetzt wieder für andere Interessierte zur Verfügung.</p>
+        </div>
+
+        <p class="demo-hinweis" id="abmeldenHinweis">Hinweis: Auch dies ist derzeit eine Design-Vorschau. Ab Phase&nbsp;4 wird die Anmelde-ID echt gegen die Google-Sheets-Anmeldeliste geprüft.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>OrtsKulturRing Schuby e.V.</h4>
+        <p>Lürschauer Weg<br>24850 Schuby</p>
+        <p>E-Mail: <a href="mailto:okrschuby@gmail.com">okrschuby@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#aufgaben">Über uns</a></li>
+          <li><a href="termine.html">Termine</a></li>
+          <li><a href="vereine.html">Vereine</a></li>
+          <li><a href="anmeldung.html">Kurs anmelden</a></li>
+          <li><a href="downloads.html">Flyer &amp; Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OrtsKulturRing Schuby e.V. — 1. Vorsitzender: Volker Hagge Ellhöft</span>
+      <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/daten.js"></script>
+<script>
+  /* ---------- Navigation (Hamburger) ---------- */
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', (e) => {
+    if (a.getAttribute('href').startsWith('#') || a.getAttribute('href').startsWith('index.html#')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  }));
+
+  /* ---------- Tabs: Anmelden / Abmelden ---------- */
+  const tabAn = document.getElementById('tabAnmelden');
+  const tabAb = document.getElementById('tabAbmelden');
+  const panelAn = document.getElementById('panelAnmelden');
+  const panelAb = document.getElementById('panelAbmelden');
+
+  tabAn.addEventListener('click', () => {
+    tabAn.classList.add('active'); tabAn.setAttribute('aria-selected','true');
+    tabAb.classList.remove('active'); tabAb.setAttribute('aria-selected','false');
+    panelAn.classList.remove('panel-hidden'); panelAb.classList.add('panel-hidden');
+  });
+  tabAb.addEventListener('click', () => {
+    tabAb.classList.add('active'); tabAb.setAttribute('aria-selected','true');
+    tabAn.classList.remove('active'); tabAn.setAttribute('aria-selected','false');
+    panelAb.classList.remove('panel-hidden'); panelAn.classList.add('panel-hidden');
+  });
+
+  /* ---------- Verbindung zum echten Anmelde-Backend (Phase 4) ----------
+     Nach dem Einrichten des Apps-Script-Backends (siehe
+     google-apps-script/EINRICHTUNG.md) hier die "/exec"-URL eintragen.
+     Solange die URL leer ist, läuft die Seite im Demo-Modus weiter
+     (wie in Phase 3) und speichert nichts dauerhaft. */
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzfu-A0tT2ECfKslD_I193fm7Jp8F4sRIZ-jNpZhvSwDTXESxtmNAd2fu6cnLxDtHqJ/exec"; // <-- hier die /exec-URL einfügen
+  const BACKEND_AKTIV = APPS_SCRIPT_URL.trim().length > 0;
+
+  async function backendAufruf_(payload){
+    const res = await fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" }, // absichtlich text/plain, siehe EINRICHTUNG.md
+      body: JSON.stringify(payload)
+    });
+    return await res.json();
+  }
+
+  if (BACKEND_AKTIV) {
+    document.getElementById('anmeldenHinweis').textContent =
+      "Diese Anmeldung wird jetzt echt in der Google-Sheets-Anmeldeliste gespeichert, und du erhältst eine echte Bestätigungsmail.";
+    document.getElementById('abmeldenHinweis').textContent =
+      "Diese Abmeldung wird jetzt echt gegen die Google-Sheets-Anmeldeliste geprüft.";
+  }
+
+  /* ---------- Kursauswahl vorbereiten ---------- */
+  const KURSE_LISTE = TERMINE.filter(t => t.typ === "kurs");
+  const params = new URLSearchParams(window.location.search);
+  const vorausgewaehlteId = params.get('kurs');
+
+  const kursSelect = document.getElementById('kursSelect');
+  const feldKursauswahl = document.getElementById('feldKursauswahl');
+  const kursAuswahlInfo = document.getElementById('kursAuswahlInfo');
+
+  // <select> immer befüllen (auch wenn ein Kurs vorausgewählt ist, damit "Anderen Kurs wählen" funktioniert)
+  const rubrikGruppen = {};
+  KURSE_LISTE.forEach(k => {
+    const label = RUBRIK_META[k.rubrik].label;
+    if (!rubrikGruppen[label]) rubrikGruppen[label] = [];
+    rubrikGruppen[label].push(k);
+  });
+  Object.entries(rubrikGruppen).forEach(([label, kurse]) => {
+    const group = document.createElement('optgroup');
+    group.label = label;
+    kurse.forEach(k => {
+      const opt = document.createElement('option');
+      opt.value = k.id;
+      opt.textContent = k.titel;
+      group.appendChild(opt);
+    });
+    kursSelect.appendChild(group);
+  });
+
+  function formatDatum(datumStr){
+    const d = new Date(datumStr + "T00:00:00");
+    return d.toLocaleDateString("de-DE", { day:"2-digit", month:"2-digit", year:"2-digit" });
+  }
+
+  function zeigeTerminoptionen(kurs){
+    const wrap = document.getElementById('feldTerminoptionen');
+    if (!kurs || kurs.optionen.length <= 1) {
+      wrap.innerHTML = "";
+      return;
+    }
+    wrap.innerHTML = `
+      <div class="feld">
+        <label>Termin wählen *</label>
+        <ul class="termin-optionen-auswahl">
+          ${kurs.optionen.map((o, i) => `
+            <li>
+              <label>
+                <input type="radio" name="terminOption" value="${i}" ${i===0 ? "checked" : ""}>
+                <span class="opt-text">
+                  <strong>${o.bezeichnung || o.wochentag}: ${formatDatum(o.start)}, ${o.uhrzeit}</strong>
+                  <span>${o.kursleiter} · ${o.ort} · ${o.preis.toFixed(2).replace(".", ",")} €</span>
+                </span>
+              </label>
+            </li>`).join("")}
+        </ul>
+      </div>`;
+  }
+
+  function zeigeAusgewaehltenKurs(kursId, mitAuswahlfeld){
+    const kurs = KURSE_LISTE.find(k => k.id === kursId);
+    if (!kurs) return;
+
+    if (mitAuswahlfeld) {
+      feldKursauswahl.style.display = "";
+      kursAuswahlInfo.style.display = "none";
+    } else {
+      feldKursauswahl.style.display = "none";
+      kursAuswahlInfo.style.display = "block";
+      document.getElementById('ausgewaehlterKursTitel').textContent = kurs.titel;
+      const erste = kurs.optionen[0];
+      document.getElementById('ausgewaehlterKursMeta').innerHTML =
+        `<strong>Ort:</strong> ${erste.ort} &nbsp;·&nbsp; <strong>Kosten:</strong> ab ${erste.preis.toFixed(2).replace(".", ",")} €`;
+      document.getElementById('ausgewaehlterKursBeschreibung').textContent = kurs.beschreibung;
+    }
+    kursSelect.value = kursId;
+    zeigeTerminoptionen(kurs);
+  }
+
+  if (vorausgewaehlteId && KURSE_LISTE.some(k => k.id === vorausgewaehlteId)) {
+    zeigeAusgewaehltenKurs(vorausgewaehlteId, false);
+  } else {
+    feldKursauswahl.style.display = "";
+    zeigeTerminoptionen(KURSE_LISTE[0]);
+  }
+
+  document.getElementById('andererKursLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    feldKursauswahl.style.display = "";
+    kursAuswahlInfo.style.display = "none";
+  });
+
+  kursSelect.addEventListener('change', () => {
+    zeigeTerminoptionen(KURSE_LISTE.find(k => k.id === kursSelect.value));
+  });
+
+  /* ---------- Anmelde-Formular ---------- */
+  document.getElementById('formAnmelden').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const vorname = document.getElementById('vorname').value.trim();
+    const nachname = document.getElementById('nachname').value.trim();
+    const telefon = document.getElementById('telefon').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const datenschutzOk = document.getElementById('datenschutzOk').checked;
+    const radioGewaehlt = document.querySelector('input[name="terminOption"]:checked');
+    const kurs = KURSE_LISTE.find(k => k.id === kursSelect.value);
+    const braucheOption = kurs && kurs.optionen.length > 1;
+
+    const gueltig = vorname && nachname && telefon && email && datenschutzOk && (!braucheOption || radioGewaehlt);
+    const fehlerEl = document.getElementById('anmeldenFehler');
+    fehlerEl.classList.toggle('zeigen', !gueltig);
+    if (!gueltig) return;
+
+    const optionIndex = radioGewaehlt ? parseInt(radioGewaehlt.value, 10) : 0;
+    const option = kurs.optionen[optionIndex];
+    const submitBtn = this.querySelector('button[type=submit]');
+    submitBtn.disabled = true;
+
+    let anmeldeId;
+    if (BACKEND_AKTIV) {
+      try {
+        const antwort = await backendAufruf_({ action: "anmelden", kursId: kurs.id, optionIndex, vorname, nachname, telefon, email });
+        if (!antwort.ok) {
+          fehlerEl.textContent = antwort.error || "Anmeldung leider fehlgeschlagen.";
+          fehlerEl.classList.add('zeigen');
+          submitBtn.disabled = false;
+          return;
+        }
+        anmeldeId = antwort.anmeldeId;
+      } catch (err) {
+        fehlerEl.textContent = "Verbindung zum Anmelde-Server fehlgeschlagen. Bitte später erneut versuchen.";
+        fehlerEl.classList.add('zeigen');
+        submitBtn.disabled = false;
+        return;
+      }
+    } else {
+      // Demo-Modus (kein Backend konfiguriert): ID nur simuliert, nichts wird gespeichert
+      const laufendeNr = String(Math.floor(Math.random() * 20) + 1).padStart(3, "0");
+      anmeldeId = `${kurs.id}-A${laufendeNr}`;
+    }
+
+    document.getElementById('bestaetigungKursTitel').textContent = kurs.titel;
+    document.getElementById('bestaetigungTermin').textContent =
+      `${option.bezeichnung || option.wochentag}: ${formatDatum(option.start)}, ${option.uhrzeit} · ${option.ort}`;
+    document.getElementById('bestaetigungId').textContent = anmeldeId;
+
+    this.style.display = "none";
+    kursAuswahlInfo.style.display = "none";
+    document.getElementById('anmeldeBestaetigung').style.display = "block";
+  });
+
+  /* ---------- Abmelde-Formular ---------- */
+  const btnAbmelden = document.getElementById('btnAbmelden');
+  const abmeldeFeldWrap = document.getElementById('abmeldeFeldWrap');
+  const abmeldeId = document.getElementById('abmeldeId');
+  let abmeldeFeldSichtbar = false;
+
+  abmeldeId.addEventListener('input', () => {
+    btnAbmelden.textContent = abmeldeId.value.trim() ? "Jetzt abmelden" : "Abmelden";
+  });
+
+  btnAbmelden.addEventListener('click', async () => {
+    if (!abmeldeFeldSichtbar) {
+      abmeldeFeldWrap.classList.add('zeigen');
+      abmeldeFeldSichtbar = true;
+      abmeldeId.focus();
+      return;
+    }
+    const wert = abmeldeId.value.trim();
+    const fehlerEl = document.getElementById('abmeldenFehler');
+    if (!wert) {
+      fehlerEl.classList.add('zeigen');
+      return;
+    }
+
+    btnAbmelden.disabled = true;
+    if (BACKEND_AKTIV) {
+      try {
+        const antwort = await backendAufruf_({ action: "abmelden", anmeldeId: wert });
+        if (!antwort.ok) {
+          fehlerEl.textContent = antwort.error || "Diese Anmelde-ID wurde nicht gefunden.";
+          fehlerEl.classList.add('zeigen');
+          btnAbmelden.disabled = false;
+          return;
+        }
+      } catch (err) {
+        fehlerEl.textContent = "Verbindung zum Anmelde-Server fehlgeschlagen. Bitte später erneut versuchen.";
+        fehlerEl.classList.add('zeigen');
+        btnAbmelden.disabled = false;
+        return;
+      }
+    }
+    // Im Demo-Modus (kein Backend konfiguriert) wird jede eingegebene ID akzeptiert.
+
+    fehlerEl.classList.remove('zeigen');
+    document.getElementById('formAbmelden').style.display = "none";
+    document.getElementById('abmeldeBestaetigung').style.display = "block";
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Flyer &amp; Downloads – OrtsKulturRing Schuby e.V.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aktueller Kursflyer des OrtsKulturRing Schuby e.V. zum Download, sowie ältere Ausgaben im Archiv.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header>
+  <div class="nav-row">
+    <a class="brand" href="index.html">
+      <img src="assets/wappen-schuby.png" alt="Wappen der Gemeinde Schuby">
+      <span class="brand-text">OrtsKulturRing Schuby e.V.<small>Kulturpflege &amp; Weiterbildung in Schuby</small></span>
+    </a>
+    <button class="hamburger" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Start</a>
+      <a href="index.html#infos">Infos &amp; Grußworte</a>
+      <a href="index.html#aufgaben">Über uns</a>
+      <a href="termine.html">Termine</a>
+      <a href="vereine.html">Vereine</a>
+      <a href="index.html#vorstand">Vorstand</a>
+      <a href="anmeldung.html" class="cta">Kurs anmelden</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-eyebrow"><span class="ring-bullet"></span>Downloads</div>
+      <h1>Flyer &amp; Downloads</h1>
+      <p>Hier findest du den aktuellen Kursflyer des OrtsKulturRing Schuby zum Download sowie ältere Ausgaben im Archiv.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="section-head">
+        <div class="section-eyebrow"><span class="ring-bullet"></span>Aktuelle Ausgabe</div>
+        <h2>Der aktuelle Flyer</h2>
+      </div>
+
+      <div class="flyer-aktuell" id="flyerAktuellBox">
+        <div class="flyer-icon" aria-hidden="true">📄</div>
+        <div>
+          <span class="flyer-badge-aktuell">Aktuelle Version</span>
+          <h3 id="flyerAktuellTitel">Kursflyer 1. Halbjahr 2024</h3>
+          <p class="flyer-meta" id="flyerAktuellMeta">Version 2024-1 · veröffentlicht am 01.01.2024</p>
+          <a class="btn btn-primary" id="flyerAktuellLink" href="downloads/Flyer_OKR_2024-1.pdf" download>Flyer herunterladen (PDF)</a>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <div class="section-eyebrow"><span class="ring-bullet"></span>Archiv</div>
+        <h2>Ältere Ausgaben</h2>
+        <p>Sobald eine neue Version veröffentlicht wird, wandert die bisherige automatisch hierher.</p>
+      </div>
+
+      <ul class="archiv-liste" id="archivListe">
+        <!-- wird per JavaScript aus assets/flyer-daten.js befüllt -->
+      </ul>
+
+      <p class="platzhalter-hinweis">Hinweis: Neue Flyer-Versionen werden künftig über das Pflegetool hochgeladen (Phase 6) — die alte Version wird dabei automatisch archiviert, versioniert und hier gelistet.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>OrtsKulturRing Schuby e.V.</h4>
+        <p>Lürschauer Weg<br>24850 Schuby</p>
+        <p>E-Mail: <a href="mailto:okrschuby@gmail.com">okrschuby@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#aufgaben">Über uns</a></li>
+          <li><a href="termine.html">Termine</a></li>
+          <li><a href="vereine.html">Vereine</a></li>
+          <li><a href="anmeldung.html">Kurs anmelden</a></li>
+          <li><a href="downloads.html">Flyer &amp; Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OrtsKulturRing Schuby e.V. — 1. Vorsitzender: Volker Hagge Ellhöft</span>
+      <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/flyer-daten.js"></script>
+<script>
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  function formatDatumLang(iso){
+    const d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString("de-DE", { day:"2-digit", month:"2-digit", year:"numeric" });
+  }
+
+  const aktuell = FLYER_VERSIONEN.find(f => f.aktuell);
+  if (aktuell) {
+    document.getElementById('flyerAktuellTitel').textContent = aktuell.titel;
+    document.getElementById('flyerAktuellMeta').textContent =
+      "Version " + aktuell.version + " · veröffentlicht am " + formatDatumLang(aktuell.datum);
+    document.getElementById('flyerAktuellLink').href = "downloads/" + aktuell.datei;
+  }
+
+  const archiv = FLYER_VERSIONEN.filter(f => !f.aktuell).sort((a,b) => b.datum.localeCompare(a.datum));
+  const archivListeEl = document.getElementById('archivListe');
+  if (archiv.length === 0) {
+    archivListeEl.innerHTML = '<li class="archiv-leer">Noch keine älteren Ausgaben im Archiv.</li>';
+  } else {
+    archivListeEl.innerHTML = archiv.map(f => `
+      <li>
+        <span>${f.titel} <span class="archiv-datum">(Version ${f.version})</span></span>
+        <a href="downloads/archiv/${f.datei}" download>Herunterladen (PDF)</a>
+      </li>`).join("");
+  }
+</script>
+
+</body>
+</html>
