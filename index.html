@@ -254,8 +254,9 @@
   function personKartenHtml(p){
     let kontaktHtml = "";
     if (p.telefon) {
-      const telHref = p.telefon.replace(/[^\d+]/g, "");
-      kontaktHtml += `<a href="tel:${telHref}">${p.telefon}</a>`;
+      const telText = String(p.telefon); // Absicherung: falls Google Sheets die Zelle als Zahl statt Text liefert
+      const telHref = telText.replace(/[^\d+]/g, "");
+      kontaktHtml += `<a href="tel:${telHref}">${telText}</a>`;
     }
     if (p.email) {
       kontaktHtml += (kontaktHtml ? "<br>" : "") + `<a href="mailto:${p.email}">${p.email}</a>`;

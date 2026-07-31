@@ -50,7 +50,7 @@
       <div class="vereine-intro-box">
         <p>Sie sind neu in Schuby? Sie suchen einen Verein? Sie suchen den passenden Ansprechpartner?</p>
         <p>Hier finden Sie die Vereine, die Mitglied im OrtsKulturRing Schuby e.V. sind, mit ihren Ansprechpartnern.</p>
-        <p>Es fehlt Ihnen eine Information? Dann <a href="mailto:okr.schuby@gmail.com">schreiben Sie uns</a>.</p>
+        <p>Es fehlt Ihnen eine Information? Dann <a href="mailto:okrschuby@gmail.com">schreiben Sie uns</a>.</p>
       </div>
 
       <div class="vereine-liste" id="vereineListe">
@@ -68,7 +68,7 @@
       <div>
         <h4>OrtsKulturRing Schuby e.V.</h4>
         <p>Lürschauer Weg<br>24850 Schuby</p>
-        <p>E-Mail: <a href="mailto:okr.schuby@gmail.com">okr.schuby@gmail.com</a></p>
+        <p>E-Mail: <a href="mailto:okrschuby@gmail.com">okrschuby@gmail.com</a></p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -109,6 +109,7 @@
   /* ---------- Vereins-Kacheln aufbauen ---------- */
   function telefonHtml(tel){
     if (!tel) return "";
+    tel = String(tel); // Absicherung: falls Google Sheets die Zelle als Zahl statt Text liefert
     const telHref = tel.replace(/[^\d+]/g, "");
     return `<a href="tel:${telHref}">${tel}</a>`;
   }
