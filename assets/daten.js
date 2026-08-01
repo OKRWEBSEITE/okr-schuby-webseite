@@ -200,5 +200,14 @@ const TERMINE = [
     optionen: [
       { bezeichnung: "", kursleiter: "Sarah Kreimendahl u. Katharina Bündel", start: "2026-09-27", wochentag: "Sonntag", uhrzeit: "10.00", ort: "Schuby Boyebüll 8", anzahl: 1, preis: 35, kursbegrenzung: 15 }
     ]
+  },
+
+  {
+    id: "OKR-2026-2-20", typ: "kurs", rubrik: "allgemein",
+    titel: "IPad und IPhone für Senioren",
+    beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Matthias Alexander", start: "2026-09-14", wochentag: "Montag", uhrzeit: "17.30", ort: "Schuby, Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 12 }
+    ]
   }
 ];
