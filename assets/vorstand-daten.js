@@ -8,7 +8,7 @@
    ============================================================ */
 
 const VORSTAND = [
-  { name: "Volker Hagge Ellhöft", funktion: "1. Vorsitzender", telefon: "949432", email: "" },
+  { name: "Volker Hagge Ellhöft", funktion: "1. Vorsitzender", telefon: "04621 949432", email: "volker.hagge-ellhoeft@t-online.de" },
   { name: "Anka Mees", funktion: "2. Vorsitzende", telefon: "0171 7053430", email: "" },
   { name: "Heike Pöschel", funktion: "Kassenwartin", telefon: "0151 42221931", email: "heike@poeschel-schuby.de" },
   { name: "Anneke Hinz", funktion: "Schriftwartin", telefon: "0160 98778104", email: "anneke.stallbaum@gmx.net" },
