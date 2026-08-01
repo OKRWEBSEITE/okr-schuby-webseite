@@ -91,12 +91,10 @@
           <h3>Danke für Ihre Nachricht!</h3>
           <p>Wir haben Ihre Nachricht erhalten und melden uns so schnell wie möglich bei Ihnen.</p>
         </div>
-
-        <p class="demo-hinweis" id="kontaktHinweis">Hinweis: Dies ist aktuell eine Design-Vorschau. Die Nachricht wird noch nicht verschickt — das folgt mit der Anbindung an das Anmelde-Backend (siehe Phase 4).</p>
       </div>
 
       <div class="hinweisbox">
-        Sie erreichen uns auch direkt per E-Mail: <a href="mailto:okr.schuby@gmail.com">okr.schuby@gmail.com</a>
+        Sie erreichen uns auch direkt per E-Mail: <a href="mailto:okrschuby@gmail.com">okrschuby@gmail.com</a>
       </div>
 
     </div>
@@ -110,7 +108,7 @@
       <div>
         <h4>OrtsKulturRing Schuby e.V.</h4>
         <p>Lürschauer Weg<br>24850 Schuby</p>
-        <p>E-Mail: <a href="mailto:okr.schuby@gmail.com">okr.schuby@gmail.com</a></p>
+        <p>E-Mail: <a href="mailto:okrschuby@gmail.com">okrschuby@gmail.com</a></p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -148,13 +146,8 @@
   });
 
   /* ---------- Verbindung zum Backend (gleiche Konfiguration wie anmeldung.html) ---------- */
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzfu-A0tT2ECfKslD_I193fm7Jp8F4sRIZ-jNpZhvSwDTXESxtmNAd2fu6cnLxDtHqJ/exec"; // <-- hier die /exec-URL einfügen (gleiche wie in anmeldung.html)
+  const APPS_SCRIPT_URL = ""; // <-- hier die /exec-URL einfügen (gleiche wie in anmeldung.html)
   const BACKEND_AKTIV = APPS_SCRIPT_URL.trim().length > 0;
-
-  if (BACKEND_AKTIV) {
-    document.getElementById('kontaktHinweis').textContent =
-      "Ihre Nachricht wird jetzt echt per E-Mail an den OKR Schuby versendet.";
-  }
 
   document.getElementById('formKontakt').addEventListener('submit', async function(e){
     e.preventDefault();
