@@ -13,7 +13,7 @@ const VORSTAND = [
   { name: "Heike Pöschel", funktion: "Kassenwartin", telefon: "0151 42221931", email: "okrschuby@gmail.com" },
   { name: "Anneke Hinz", funktion: "Schriftwartin", telefon: "0160 98778104", email: "okrschuby@gmail.com" },
   { name: "Detlef Scherer", funktion: "Beisitzer", telefon: "04621 41371", email: "okrschuby@gmail.com" },
-  { name: "Rolf Murst", funktion: "Beisitzer", telefon: "41081", email: "" },
+  { name: "Rolf Murst", funktion: "Beisitzer", telefon: "04621 41081", email: "" },
   { name: "Sina Schade", funktion: "Beisitzerin", telefon: "1733112142", email: "" },
   { name: "Michael Gerke", funktion: "Beisitzer", telefon: "1728173211", email: "" }
 ];
