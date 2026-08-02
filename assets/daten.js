@@ -185,15 +185,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-18", typ: "kurs", rubrik: "gesundheit",
-    titel: "Erste Hilfe für den Hund ( Mit dem eigenen Hund)",
-    beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles im Notfall zu handel",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Sarah Kreimendahl u. Katharina Bündel", start: "2026-09-27", wochentag: "Sonntag", uhrzeit: "10.00", ort: "Schuby Boyebüll 8", anzahl: 1, preis: 35, kursbegrenzung: 15 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-19", typ: "kurs", rubrik: "gesundheit",
     titel: "Erste Hilfe für den Hund ( Mit dem eigenen Hund)",
     beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles im Notfall zu handel",
