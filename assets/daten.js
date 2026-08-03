@@ -118,18 +118,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-11", typ: "kurs", rubrik: "koch",
-    titel: "Gerichte zum Erntedank",
-    beschreibung: "Gemeinsames herbstliches Kochen. Hinweis: Bitte kleine Behältnisse mitbringen. Kursgebühr zzgl. Kochumlage.",
-    optionen: [
-      { bezeichnung: "Termin 1", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-02", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: null },
-      { bezeichnung: "Termin 2", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-03", wochentag: "Dienstag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: null },
-      { bezeichnung: "Termin 3", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-09", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: null },
-      { bezeichnung: "Termin 4", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-13", typ: "kurs", rubrik: "allgemein",
     titel: "Kerzen Workshop",
     beschreibung: "Zwei individuelle Kerzenständer aus Gips und zehn Stabkerzen gestalten – ganz nach eigenem Geschmack (dippen und verzieren mit Schiebefolie). Materialien werden gestellt.",
@@ -199,6 +187,18 @@ const TERMINE = [
     beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
     optionen: [
       { bezeichnung: "", kursleiter: "NN", start: "2026-10-06", wochentag: "Dienstag", uhrzeit: "15:00 – 18:00 Uhr", ort: "Ehemalige Sozialstation, Boyebüll 8", anzahl: 1, preis: 9, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-11", typ: "kurs", rubrik: "koch",
+    titel: "Gerichte zum Erntedank",
+    beschreibung: "Gemeinsames herbstliches Kochen. Hinweis: Bitte kleine Behältnisse mitbringen. Kursgebühr zzgl. Kochumlage.",
+    optionen: [
+      { bezeichnung: "Termin 1", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-02", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 2", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-03", wochentag: "Dienstag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 3", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-09", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 4", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
     ]
   }
 ];
