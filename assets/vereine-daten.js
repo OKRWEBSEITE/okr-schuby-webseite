@@ -105,7 +105,7 @@ const VEREINE = [
   {
     name: "Sportverein VfB Schuby",
     ansprechpartner: [
-      { name: "Steffen Bartelt", funktion: "Vorsitzender des Vereins", telefon: "", email: "", website: "" }
+      { name: "Steffen Bartsch", funktion: "Vorsitzender des Vereins", telefon: "17681134192", email: "", website: "www-vfb-schuby.de" }
     ]
   }
 ];
