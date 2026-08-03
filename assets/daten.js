@@ -130,15 +130,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-12", typ: "kurs", rubrik: "allgemein",
-    titel: "Workshop Malen mit Acrylfarben",
-    beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Robert Schulze", start: "2026-10-06", wochentag: "Dienstag", uhrzeit: "15:00 – 18:00 Uhr", ort: "Ehemalige Sozialstation, Boyebüll 8", anzahl: 1, preis: 9, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-13", typ: "kurs", rubrik: "allgemein",
     titel: "Kerzen Workshop",
     beschreibung: "Zwei individuelle Kerzenständer aus Gips und zehn Stabkerzen gestalten – ganz nach eigenem Geschmack (dippen und verzieren mit Schiebefolie). Materialien werden gestellt.",
@@ -199,6 +190,15 @@ const TERMINE = [
     beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
     optionen: [
       { bezeichnung: "", kursleiter: "Matthias Alexander", start: "2026-09-14", wochentag: "Montag", uhrzeit: "17.30", ort: "Schuby, Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-12", typ: "kurs", rubrik: "allgemein",
+    titel: "Workshop Malen mit Acrylfarben",
+    beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "NN", start: "2026-10-06", wochentag: "Dienstag", uhrzeit: "15:00 – 18:00 Uhr", ort: "Ehemalige Sozialstation, Boyebüll 8", anzahl: 1, preis: 9, kursbegrenzung: 12 }
     ]
   }
 ];
