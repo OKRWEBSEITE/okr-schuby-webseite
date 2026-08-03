@@ -154,15 +154,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-19", typ: "kurs", rubrik: "gesundheit",
-    titel: "Erste Hilfe für den Hund ( Mit dem eigenen Hund)",
-    beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles im Notfall zu handel",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Sarah Kreimendahl u. Katharina Bündel", start: "2026-09-27", wochentag: "Sonntag", uhrzeit: "10.00", ort: "Schuby Boyebüll 8", anzahl: 1, preis: 35, kursbegrenzung: 15 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-20", typ: "kurs", rubrik: "allgemein",
     titel: "IPad und IPhone für Senioren",
     beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
@@ -217,6 +208,15 @@ const TERMINE = [
     beschreibung: "Hier kann der Vorstand den Umgang mit der INternetanmeldung üben",
     optionen: [
       { bezeichnung: "", kursleiter: "Volker Hagge Ellhöft", start: "2026-08-12", wochentag: "Mi", uhrzeit: "1899-12-30", ort: "ONline", anzahl: 10, preis: 0, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-19", typ: "kurs", rubrik: "gesundheit",
+    titel: "Erste Hilfe für den Hund ( Mit dem eigenen Hund)",
+    beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles um im Notfall zu handel)",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Sarah Kreimendahl u. Katharina Bündel", start: "2026-09-27", wochentag: "Sonntag", uhrzeit: "10.00", ort: "Schuby Boyebüll 8", anzahl: 1, preis: 35, kursbegrenzung: 15 }
     ]
   }
 ];
