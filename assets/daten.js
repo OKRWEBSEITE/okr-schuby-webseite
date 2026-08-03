@@ -154,16 +154,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-17", typ: "kurs", rubrik: "koch",
-    titel: "Männer kochen",
-    beschreibung: "Gemeinsames Kochen für Männer. Hinweis: Bitte kleine Behältnisse mitbringen. Kursgebühr zzgl. Kochumlage.",
-    optionen: [
-      { bezeichnung: "Termin 1", kursleiter: "Gerd Kesseler", start: "2026-10-14", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: null },
-      { bezeichnung: "Termin 2", kursleiter: "Gerd Kesseler", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-19", typ: "kurs", rubrik: "gesundheit",
     titel: "Erste Hilfe für den Hund ( Mit dem eigenen Hund)",
     beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles im Notfall zu handel",
@@ -199,6 +189,16 @@ const TERMINE = [
       { bezeichnung: "Termin 2", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-03", wochentag: "Dienstag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
       { bezeichnung: "Termin 3", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-09", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
       { bezeichnung: "Termin 4", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-17", typ: "kurs", rubrik: "koch",
+    titel: "Männer kochen",
+    beschreibung: "Gemeinsames Kochen für Männer. Hinweis: Bitte kleine Behältnisse mitbringen. Kursgebühr zzgl. Kochumlage.",
+    optionen: [
+      { bezeichnung: "Termin 1", kursleiter: "Gerd Kesseler", start: "2026-10-14", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 2", kursleiter: "Gerd Kesseler", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Firma Schmidt Hüsby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
     ]
   }
 ];
