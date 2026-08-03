@@ -200,5 +200,14 @@ const TERMINE = [
       { bezeichnung: "Termin 1", kursleiter: "Gerd Kesseler", start: "2026-10-14", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
       { bezeichnung: "Termin 2", kursleiter: "Gerd Kesseler", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Firma Schmidt Hüsby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
     ]
+  },
+
+  {
+    id: "OKR-2026-2-21", typ: "kurs", rubrik: "allgemein",
+    titel: "Ipad und Iphone für Senioren",
+    beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-08-19", wochentag: "MI", uhrzeit: "1899-12-30", ort: "Schuby Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 10 }
+    ]
   }
 ];
