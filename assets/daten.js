@@ -194,15 +194,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-21", typ: "kurs", rubrik: "allgemein",
-    titel: "Ipad und Iphone für Senioren",
-    beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-08-19", wochentag: "MI", uhrzeit: "1899-12-30", ort: "Schuby Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 10 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-19", typ: "kurs", rubrik: "gesundheit",
     titel: "Erste Hilfe für den Hund ( Mit dem eigenen Hund)",
     beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles um im Notfall zu handel)",
@@ -217,6 +208,15 @@ const TERMINE = [
     beschreibung: "Hier kann der Vorstand den Umgang mit der INternetanmeldung üben",
     optionen: [
       { bezeichnung: "", kursleiter: "Volker Hagge Ellhöft", start: "2026-08-12", wochentag: "Mi", uhrzeit: "1899-12-30", ort: "ONline", anzahl: 10, preis: 0, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-21", typ: "kurs", rubrik: "allgemein",
+    titel: "Ipad und Iphone für Senioren",
+    beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-08-19", wochentag: "MI", uhrzeit: "1899-12-30", ort: "Schuby Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 10 }
     ]
   }
 ];
