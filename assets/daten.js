@@ -145,29 +145,11 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-16", typ: "kurs", rubrik: "allgemein",
-    titel: "Rum Latino – Se habla español",
-    beschreibung: "Rum-Tasting mit Ingo Annies als Moderator. Vorgestellt werden 6 Rum aus dem spanischsprachigen Raum. Kosten sind vorab zu überweisen. Dauer ca. 2,5 Stunden.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Ingo Annies", start: "2026-10-23", wochentag: "Freitag", uhrzeit: "19:30 Uhr", ort: "Sportlerheim", anzahl: 1, preis: 25, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-20", typ: "kurs", rubrik: "allgemein",
     titel: "IPad und IPhone für Senioren",
     beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
     optionen: [
       { bezeichnung: "", kursleiter: "Matthias Alexander", start: "2026-09-14", wochentag: "Montag", uhrzeit: "17.30", ort: "Schuby, Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 12 }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-12", typ: "kurs", rubrik: "allgemein",
-    titel: "Workshop Malen mit Acrylfarben",
-    beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "NN", start: "2026-10-06", wochentag: "Dienstag", uhrzeit: "15:00 – 18:00 Uhr", ort: "Ehemalige Sozialstation, Boyebüll 8", anzahl: 1, preis: 9, kursbegrenzung: 12 }
     ]
   },
 
@@ -217,6 +199,24 @@ const TERMINE = [
     beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
     optionen: [
       { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-08-19", wochentag: "MI", uhrzeit: "1899-12-30", ort: "Schuby Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 10 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-16", typ: "kurs", rubrik: "allgemein",
+    titel: "Rum Latino – Se habla español - Vorankündigung 2027",
+    beschreibung: "Rum-Tasting mit Ingo Annies als Moderator. Vorgestellt werden 6 Rum aus dem spanischsprachigen Raum. Kosten sind vorab zu überweisen. Dauer ca. 2,5 Stunden.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Ingo Annies", start: "2027-01-13", wochentag: "Freitag", uhrzeit: "19:30 Uhr", ort: "Sportlerheim", anzahl: 1, preis: 25, kursbegrenzung: 20 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-12", typ: "kurs", rubrik: "allgemein",
+    titel: "Workshop Malen mit Acrylfarben",
+    beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Britta Behrend", start: "2026-10-06", wochentag: "Dienstag", uhrzeit: "15:00 – 18:00 Uhr", ort: "Ehemalige Sozialstation, Boyebüll 8", anzahl: 1, preis: 9, kursbegrenzung: 12 }
     ]
   }
 ];
