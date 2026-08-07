@@ -216,7 +216,7 @@ const TERMINE = [
     titel: "Testkurs für den Vorstand des OKR Schuby",
     beschreibung: "Hier kann der Vorstand den Umgang mit der INternetanmeldung üben",
     optionen: [
-      { bezeichnung: "", kursleiter: "Volker Hagge Ellhöft", start: "2026-08-12", wochentag: "Mi", uhrzeit: "1899-12-30", ort: "ONline", anzahl: 10, preis: 0, kursbegrenzung: 12 }
+      { bezeichnung: "", kursleiter: "Volker Hagge Ellhöft", start: "2026-08-12", wochentag: "Mi", uhrzeit: "19.00", ort: "ONline", anzahl: 10, preis: 0, kursbegrenzung: 12 }
     ]
   }
 ];
