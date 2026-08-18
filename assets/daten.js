@@ -194,15 +194,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-20", typ: "kurs", rubrik: "allgemein",
-    titel: "IPad und IPhone für Senioren",
-    beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Matthias Alexander", start: "2026-09-14", wochentag: "Montag", uhrzeit: "1899-12-30", ort: "Schuby, Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 12 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-22", typ: "kurs", rubrik: "allgemein",
     titel: "Testkurs für den Vorstand des OKR Schuby",
     beschreibung: "Hier kann der Vorstand den Umgang mit der INternetanmeldung üben",
@@ -217,6 +208,15 @@ const TERMINE = [
     beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
     optionen: [
       { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-08-19", wochentag: "MI", uhrzeit: "1899-12-30", ort: "Schuby Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 10 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-20", typ: "kurs", rubrik: "allgemein",
+    titel: "IPad und IPhone für Senioren",
+    beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Matthias Alexander", start: "2026-09-14", wochentag: "Montag", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 12 }
     ]
   }
 ];
