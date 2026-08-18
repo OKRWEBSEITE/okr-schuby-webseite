@@ -292,7 +292,9 @@
   }
   const infoFeedEl = document.getElementById('infoFeedListe');
   infoFeedEl.innerHTML = INFOS.map(infoKarteHtml).join("") +
-    '<div class="info-card info-empty">Weitere Infos und Ankündigungen folgen an dieser Stelle — der Vorstand pflegt diese Rubrik über das Pflegetool.</div>';
+    (INFOS.length === 0
+      ? '<div class="info-card info-empty">Weitere Infos und Ankündigungen folgen an dieser Stelle — der Vorstand pflegt diese Rubrik über das Pflegetool.</div>'
+      : "");
 </script>
 
 </body>
