@@ -55,15 +55,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-04", typ: "kurs", rubrik: "sport",
-    titel: "Bodyfit für Jedermann",
-    beschreibung: "Ganzkörpertraining für alle Fitnesslevel. Hinweis: Sportbekleidung und Handtuch mitbringen.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-20", wochentag: "Donnerstag", uhrzeit: "16:45 – 17:45 Uhr", ort: "Schule Schuby, Turnhalle", anzahl: 10, preis: 27, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-05", typ: "kurs", rubrik: "sport",
     titel: "Line Dance Anfängergruppe",
     beschreibung: "Line Dance zu Country-Musik, Rock&Pop, Schlager und Oldies – ohne Partner, für jede Altersschicht.",
@@ -217,6 +208,16 @@ const TERMINE = [
     beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
     optionen: [
       { bezeichnung: "", kursleiter: "Matthias Alexander", start: "2026-09-14", wochentag: "Montag", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-04", typ: "kurs", rubrik: "sport",
+    titel: "Bodyfit für Jedermann",
+    beschreibung: "Ganzkörpertraining für alle Fitnesslevel. Hinweis: Sportbekleidung und Handtuch mitbringen.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-20", wochentag: "Donnerstag", uhrzeit: "16:45 – 17:45 Uhr", ort: "Schule Schuby, Turnhalle", anzahl: 10, preis: 27, kursbegrenzung: null },
+      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-17", wochentag: "Montag", uhrzeit: "18.00-19.00", ort: "Schuby Sporthalle", anzahl: 10, preis: 35, kursbegrenzung: 25 }
     ]
   }
 ];
