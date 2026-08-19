@@ -28,38 +28,11 @@ const VERANSTALTUNG_META = {
 
 const TERMINE = [
   {
-    id: "OKR-2026-2-01", typ: "kurs", rubrik: "gesundheit",
-    titel: "Wir bleiben in Bewegung mit Wassergymnastik – Dienstags-Gruppe",
-    beschreibung: "Gymnastik im warmen Wasser – schonend für die Gelenke, für alle Altersgruppen geeignet.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Clarissa Preußer", start: "2026-08-18", wochentag: "Dienstag", uhrzeit: "13:45 Uhr", ort: "Schwimmhalle Schleswig, kleines Becken", anzahl: 16, preis: 80, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-02", typ: "kurs", rubrik: "gesundheit",
     titel: "Wir bleiben in Bewegung mit Wassergymnastik – Freitags-Gruppe",
     beschreibung: "Gymnastik im warmen Wasser – schonend für die Gelenke, für alle Altersgruppen geeignet.",
     optionen: [
       { bezeichnung: "", kursleiter: "Tanja Schimmer", start: "2026-08-21", wochentag: "Freitag", uhrzeit: "11:45 Uhr", ort: "Schwimmhalle Schleswig, kleines Becken", anzahl: 16, preis: 80, kursbegrenzung: null }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-03", typ: "kurs", rubrik: "gesundheit",
-    titel: "Physiosport für den Rücken",
-    beschreibung: "Kräftigung und Mobilisation für einen gesunden Rücken. Hinweis: Bitte Matte oder Wolldecke mitbringen.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Martina Henningsen", start: "2026-08-17", wochentag: "Montag", uhrzeit: "16:30 – 17:30 Uhr", ort: "Dag-Hammarskjöld-Haus, Schuby, Bahnhofstr. 3", anzahl: 10, preis: 25, kursbegrenzung: null }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-05", typ: "kurs", rubrik: "sport",
-    titel: "Line Dance Anfängergruppe",
-    beschreibung: "Line Dance zu Country-Musik, Rock&Pop, Schlager und Oldies – ohne Partner, für jede Altersschicht.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Marianne Scheel", start: "2026-08-18", wochentag: "Dienstag", uhrzeit: "17:30 – 18:30 Uhr", ort: "Dag-Hammarskjöld-Haus, Schuby, Bahnhofstr. 3", anzahl: 10, preis: 25, kursbegrenzung: null }
     ]
   },
 
@@ -167,29 +140,38 @@ const TERMINE = [
   },
 
   {
+    id: "OKR-2026-2-01", typ: "kurs", rubrik: "gesundheit",
+    titel: "Wir bleiben in Bewegung mit Wassergymnastik – Dienstags-Gruppe",
+    beschreibung: "Gymnastik im warmen Wasser – schonend für die Gelenke, für alle Altersgruppen geeignet.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Clarissa Preußer", start: "2026-08-18", wochentag: "Dienstag", uhrzeit: "13:45 Uhr", ort: "Schwimmhalle Schleswig, kleines Becken", anzahl: 16, preis: 80, kursbegrenzung: null }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-05", typ: "kurs", rubrik: "sport",
+    titel: "Line Dance Anfängergruppe",
+    beschreibung: "Line Dance zu Country-Musik, Rock&Pop, Schlager und Oldies – ohne Partner, für jede Altersschicht.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Marianne Scheel", start: "2026-08-18", wochentag: "Dienstag", uhrzeit: "17:30 – 18:30 Uhr", ort: "Dag-Hammarskjöld-Haus, Schuby, Bahnhofstr. 3", anzahl: 10, preis: 25, kursbegrenzung: null }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-03", typ: "kurs", rubrik: "gesundheit",
+    titel: "Physiosport für den Rücken",
+    beschreibung: "Kräftigung und Mobilisation für einen gesunden Rücken. Hinweis: Bitte Matte oder Wolldecke mitbringen.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Martina Henningsen", start: "2026-08-17", wochentag: "Montag", uhrzeit: "16:30 – 17:30 Uhr", ort: "Dag-Hammarskjöld-Haus, Schuby, Bahnhofstr. 3", anzahl: 10, preis: 25, kursbegrenzung: null }
+    ]
+  },
+
+  {
     id: "OKR-2026-2-16", typ: "kurs", rubrik: "allgemein",
     titel: "Rum Latino – Se habla español - Vorankündigung 2027",
     beschreibung: "Rum-Tasting mit Ingo Annies als Moderator. Vorgestellt werden 6 Rum aus dem spanischsprachigen Raum. Kosten sind vorab zu überweisen. Dauer ca. 2,5 Stunden.",
     optionen: [
       { bezeichnung: "", kursleiter: "Ingo Annies", start: "2027-01-13", wochentag: "Freitag", uhrzeit: "19:30 Uhr", ort: "Sportlerheim", anzahl: 1, preis: 25, kursbegrenzung: 20 }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-12", typ: "kurs", rubrik: "allgemein",
-    titel: "Workshop Malen mit Acrylfarben",
-    beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Britta Behrend", start: "2026-10-06", wochentag: "Dienstag", uhrzeit: "15:00 – 18:00 Uhr", ort: "Ehemalige Sozialstation, Boyebüll 8", anzahl: 1, preis: 9, kursbegrenzung: 12 }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-22", typ: "kurs", rubrik: "allgemein",
-    titel: "Testkurs für den Vorstand des OKR Schuby",
-    beschreibung: "Hier kann der Vorstand den Umgang mit der INternetanmeldung üben",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Volker Hagge Ellhöft", start: "2026-08-12", wochentag: "Mi", uhrzeit: "19.00", ort: "ONline", anzahl: 10, preis: 0, kursbegrenzung: 12 }
     ]
   },
 
@@ -203,6 +185,15 @@ const TERMINE = [
   },
 
   {
+    id: "OKR-2026-2-12", typ: "kurs", rubrik: "allgemein",
+    titel: "Workshop Malen mit Acrylfarben",
+    beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Britta Behrend", start: "2026-10-06", wochentag: "Dienstag", uhrzeit: "15:00 – 18:00 Uhr", ort: "Ehemalige Sozialstation, Boyebüll 8", anzahl: 1, preis: 9, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
     id: "OKR-2026-2-20", typ: "kurs", rubrik: "allgemein",
     titel: "IPad und IPhone für Senioren",
     beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
@@ -212,12 +203,21 @@ const TERMINE = [
   },
 
   {
+    id: "OKR-2026-2-22", typ: "kurs", rubrik: "allgemein",
+    titel: "Testkurs für den Vorstand des OKR Schuby",
+    beschreibung: "Hier kann der Vorstand den Umgang mit der INternetanmeldung üben",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Volker Hagge Ellhöft", start: "2026-08-12", wochentag: "Mi", uhrzeit: "19.00", ort: "ONline", anzahl: 10, preis: 0, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
     id: "OKR-2026-2-04", typ: "kurs", rubrik: "sport",
     titel: "Bodyfit für Jedermann",
     beschreibung: "Ganzkörpertraining für alle Fitnesslevel. Hinweis: Sportbekleidung und Handtuch mitbringen.",
     optionen: [
       { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-20", wochentag: "Donnerstag", uhrzeit: "16:45 – 17:45 Uhr", ort: "Schule Schuby, Turnhalle", anzahl: 10, preis: 27, kursbegrenzung: null },
-      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-17", wochentag: "Montag", uhrzeit: "18.00-19.00", ort: "Schuby Sporthalle", anzahl: 10, preis: 35, kursbegrenzung: 25 }
+      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-17", wochentag: "Montag", uhrzeit: "18.00-19.00", ort: "Schuby Sporthalle", anzahl: 10, preis: 35, kursbegrenzung: 2 }
     ]
   }
 ];
