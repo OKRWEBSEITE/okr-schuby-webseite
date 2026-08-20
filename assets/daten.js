@@ -176,15 +176,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-21", typ: "kurs", rubrik: "allgemein",
-    titel: "Ipad und Iphone für Senioren",
-    beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-08-19", wochentag: "MI", uhrzeit: "1899-12-30", ort: "Schuby Boyebüll 8", anzahl: 10, preis: 50, kursbegrenzung: 10 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-12", typ: "kurs", rubrik: "allgemein",
     titel: "Workshop Malen mit Acrylfarben",
     beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
@@ -212,12 +203,29 @@ const TERMINE = [
   },
 
   {
+    id: "OKR-2026-2-21", typ: "kurs", rubrik: "allgemein",
+    titel: "Ipad und Iphone für Senioren",
+    beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-11-18", wochentag: "MI", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 10 }
+    ]
+  },
+
+  {
     id: "OKR-2026-2-04", typ: "kurs", rubrik: "sport",
     titel: "Bodyfit für Jedermann",
     beschreibung: "Ganzkörpertraining für alle Fitnesslevel. Hinweis: Sportbekleidung und Handtuch mitbringen.",
     optionen: [
-      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-20", wochentag: "Donnerstag", uhrzeit: "16:45 – 17:45 Uhr", ort: "Schule Schuby, Turnhalle", anzahl: 10, preis: 27, kursbegrenzung: null },
-      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-17", wochentag: "Montag", uhrzeit: "18.00-19.00", ort: "Schuby Sporthalle", anzahl: 10, preis: 35, kursbegrenzung: 2 }
+      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-20", wochentag: "Donnerstag", uhrzeit: "16:45 – 17:45 Uhr", ort: "Schule Schuby, Turnhalle", anzahl: 10, preis: 27, kursbegrenzung: null }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-23", typ: "kurs", rubrik: "sport",
+    titel: "Intervalltraining - Crossfit",
+    beschreibung: "Wir bleiben fit und beweglich. Eine Mischung aus Intervalltraining und Crossfit mit Claudia.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Claudia Crusius", start: "2026-08-17", wochentag: "Montag", uhrzeit: "18.00", ort: "Schuby Sporthalle", anzahl: 10, preis: 35, kursbegrenzung: 22 }
     ]
   }
 ];
