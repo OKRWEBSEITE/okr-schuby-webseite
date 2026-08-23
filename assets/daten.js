@@ -216,7 +216,7 @@ const TERMINE = [
     titel: "Ipad und Iphone für Senioren",
     beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
     optionen: [
-      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-10-26", wochentag: "MI", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 10 }
+      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-11-02", wochentag: "MI", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 10 }
     ]
   }
 ];
