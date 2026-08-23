@@ -194,15 +194,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-21", typ: "kurs", rubrik: "allgemein",
-    titel: "Ipad und Iphone für Senioren",
-    beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-11-18", wochentag: "MI", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 10 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-04", typ: "kurs", rubrik: "sport",
     titel: "Bodyfit für Jedermann",
     beschreibung: "Ganzkörpertraining für alle Fitnesslevel. Hinweis: Sportbekleidung und Handtuch mitbringen.",
@@ -221,11 +212,11 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-20", typ: "kurs", rubrik: "allgemein",
-    titel: "IPad und IPhone für Senioren",
-    beschreibung: "Sie lernen den Umgang mit Ihrem eigenen Gerät",
+    id: "OKR-2026-2-21", typ: "kurs", rubrik: "allgemein",
+    titel: "Ipad und Iphone für Senioren",
+    beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
     optionen: [
-      { bezeichnung: "", kursleiter: "Matthias Alexander", start: "2026-10-26", wochentag: "Montag", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 12 }
+      { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-10-26", wochentag: "MI", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 10 }
     ]
   }
 ];
