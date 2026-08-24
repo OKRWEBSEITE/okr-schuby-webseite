@@ -122,15 +122,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-19", typ: "kurs", rubrik: "gesundheit",
-    titel: "Erste Hilfe für den Hund ( Mit dem eigenen Hund)",
-    beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles um im Notfall zu handel)",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Sarah Kreimendahl u. Katharina Bündel", start: "2026-09-27", wochentag: "Sonntag", uhrzeit: "10.00", ort: "Schuby Boyebüll 8", anzahl: 1, preis: 35, kursbegrenzung: 15 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-01", typ: "kurs", rubrik: "gesundheit",
     titel: "Wir bleiben in Bewegung mit Wassergymnastik – Dienstags-Gruppe",
     beschreibung: "Gymnastik im warmen Wasser – schonend für die Gelenke, für alle Altersgruppen geeignet.",
@@ -217,6 +208,15 @@ const TERMINE = [
     beschreibung: "Aus einer großen Anzahl fertiger Fimo-Schmuckteile persönliche Ohrringe zusammenstellen. 25 € für 2 Ohrring-Paare, jedes weitere Paar 10 € extra.",
     optionen: [
       { bezeichnung: "", kursleiter: "Hella Kleinschmidt", start: "2026-09-30", wochentag: "Mittwoch", uhrzeit: "19:00 – 20:30 Uhr", ort: "Begegnungsstätte Boyebüll 8, Schuby", anzahl: 1, preis: 25, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-19", typ: "kurs", rubrik: "gesundheit",
+    titel: "Erste Hilfe für den Hund ( Mit dem eigenen Hund)",
+    beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles um im Notfall zu handel)",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Sarah Kreimendahl u. Katharina Bündel", start: "2026-09-27", wochentag: "Sonntag", uhrzeit: "1899-12-30", ort: "Schuby Boyebüll 8", anzahl: 1, preis: 35, kursbegrenzung: 15 }
     ]
   }
 ];
