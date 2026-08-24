@@ -91,15 +91,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-14", typ: "kurs", rubrik: "allgemein",
-    titel: "Ohrringe selber gestalten – Fimo-Workshop",
-    beschreibung: "Aus einer großen Anzahl fertiger Fimo-Schmuckteile persönliche Ohrringe zusammenstellen. 25 € für 2 Ohrring-Paare, jedes weitere Paar 10 € extra.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Hella Kleinschmidt", start: "2026-09-30", wochentag: "Mittwoch", uhrzeit: "19:00 – 20:30 Uhr", ort: "Begegnungsstätte Boyebüll 8, Schuby", anzahl: 1, preis: 25, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-15", typ: "kurs", rubrik: "gesundheit",
     titel: "Kundalini Yoga",
     beschreibung: "Neuer Kurs – der Einstieg ist jederzeit möglich!",
@@ -217,6 +208,15 @@ const TERMINE = [
     beschreibung: "Wir erforschen Ihre Geräte mit immer neuen Themen und Ihren mitgebrachten Themen.",
     optionen: [
       { bezeichnung: "", kursleiter: "Mathias Alexander", start: "2026-11-02", wochentag: "MI", uhrzeit: "19.00", ort: "Schleswig", anzahl: 10, preis: 50, kursbegrenzung: 10 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-14", typ: "kurs", rubrik: "allgemein",
+    titel: "Ohrringe selber gestalten – Fimo-Workshop",
+    beschreibung: "Aus einer großen Anzahl fertiger Fimo-Schmuckteile persönliche Ohrringe zusammenstellen. 25 € für 2 Ohrring-Paare, jedes weitere Paar 10 € extra.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Hella Kleinschmidt", start: "2026-09-30", wochentag: "Mittwoch", uhrzeit: "19:00 – 20:30 Uhr", ort: "Begegnungsstätte Boyebüll 8, Schuby", anzahl: 1, preis: 25, kursbegrenzung: 12 }
     ]
   }
 ];
