@@ -82,32 +82,11 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-13", typ: "kurs", rubrik: "allgemein",
-    titel: "Kerzen Workshop",
-    beschreibung: "Zwei individuelle Kerzenständer aus Gips und zehn Stabkerzen gestalten – ganz nach eigenem Geschmack (dippen und verzieren mit Schiebefolie). Materialien werden gestellt.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Hella Kleinschmidt", start: "2026-11-10", wochentag: "Dienstag", uhrzeit: "19:00 – 21:00 Uhr", ort: "Begegnungsstätte Boyebüll 8, Schuby", anzahl: 1, preis: 35, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-15", typ: "kurs", rubrik: "gesundheit",
     titel: "Kundalini Yoga",
     beschreibung: "Neuer Kurs – der Einstieg ist jederzeit möglich!",
     optionen: [
       { bezeichnung: "", kursleiter: "Martina Rathjen", start: "2026-08-25", wochentag: "Dienstag", uhrzeit: "19:00 – 20:15 Uhr", ort: "Gemeinderaum der Kirche, Bahnhofstraße, Schuby", anzahl: 10, preis: 60, kursbegrenzung: null }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-11", typ: "kurs", rubrik: "koch",
-    titel: "Gerichte zum Erntedank",
-    beschreibung: "Gemeinsames herbstliches Kochen. Hinweis: Bitte kleine Behältnisse mitbringen. Kursgebühr zzgl. Kochumlage.",
-    optionen: [
-      { bezeichnung: "Termin 1", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-02", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
-      { bezeichnung: "Termin 2", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-03", wochentag: "Dienstag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
-      { bezeichnung: "Termin 3", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-09", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
-      { bezeichnung: "Termin 4", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
     ]
   },
 
@@ -217,6 +196,27 @@ const TERMINE = [
     beschreibung: "Handeln im Notfall ( Wundversorgung usw. alles um im Notfall zu handel)",
     optionen: [
       { bezeichnung: "", kursleiter: "Sarah Kreimendahl u. Katharina Bündel", start: "2026-09-27", wochentag: "Sonntag", uhrzeit: "1899-12-30", ort: "Schuby Boyebüll 8", anzahl: 1, preis: 35, kursbegrenzung: 15 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-13", typ: "kurs", rubrik: "allgemein",
+    titel: "Kerzen Workshop",
+    beschreibung: "Zwei individuelle Kerzenständer aus Gips und zehn Stabkerzen gestalten – ganz nach eigenem Geschmack (dippen und verzieren mit Schiebefolie). Materialien werden gestellt.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Hella Kleinschmidt", start: "2026-11-10", wochentag: "Dienstag", uhrzeit: "19:00 – 21:00 Uhr", ort: "Begegnungsstätte Boyebüll 8, Schuby", anzahl: 1, preis: 35, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-11", typ: "kurs", rubrik: "koch",
+    titel: "Gerichte zum Erntedank",
+    beschreibung: "Gemeinsames herbstliches Kochen. Hinweis: Bitte kleine Behältnisse mitbringen. Kursgebühr zzgl. Kochumlage.",
+    optionen: [
+      { bezeichnung: "Termin 1", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-02", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 2", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-03", wochentag: "Dienstag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 3", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-09", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 4", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
     ]
   }
 ];
