@@ -28,24 +28,6 @@ const VERANSTALTUNG_META = {
 
 const TERMINE = [
   {
-    id: "OKR-2026-2-02", typ: "kurs", rubrik: "gesundheit",
-    titel: "Wir bleiben in Bewegung mit Wassergymnastik – Freitags-Gruppe",
-    beschreibung: "Gymnastik im warmen Wasser – schonend für die Gelenke, für alle Altersgruppen geeignet.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Tanja Schimmer", start: "2026-08-21", wochentag: "Freitag", uhrzeit: "11:45 Uhr", ort: "Schwimmhalle Schleswig, kleines Becken", anzahl: 16, preis: 80, kursbegrenzung: null }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-06", typ: "kurs", rubrik: "sport",
-    titel: "Line Dance Gruppe 1",
-    beschreibung: "Line Dance zu Country-Musik, Rock&Pop, Schlager und Oldies – ohne Partner, für jede Altersschicht.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Marianne Scheel", start: "2026-08-20", wochentag: "Donnerstag", uhrzeit: "17:00 – 18:00 Uhr", ort: "Dag-Hammarskjöld-Haus, Schuby, Bahnhofstr. 3", anzahl: 10, preis: 25, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-07", typ: "kurs", rubrik: "sport",
     titel: "Line Dance Gruppe 2",
     beschreibung: "Line Dance zu Country-Musik, Rock&Pop, Schlager und Oldies – ohne Partner, für jede Altersschicht.",
@@ -73,38 +55,11 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-10", typ: "kurs", rubrik: "sport",
-    titel: "Outdoorsport – Bewegung an frischer Luft",
-    beschreibung: "Dehn-, Streck-, Lauf-, Koordinations- und Entspannungsübungen an der frischen Luft (angelehnt an Heigl).",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Martina Henningsen", start: "2026-08-17", wochentag: "Montag", uhrzeit: "15:15 – 16:15 Uhr", ort: "Schule Schuby", anzahl: 10, preis: 25, kursbegrenzung: null }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-15", typ: "kurs", rubrik: "gesundheit",
-    titel: "Kundalini Yoga",
-    beschreibung: "Neuer Kurs – der Einstieg ist jederzeit möglich!",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Martina Rathjen", start: "2026-08-25", wochentag: "Dienstag", uhrzeit: "19:00 – 20:15 Uhr", ort: "Gemeinderaum der Kirche, Bahnhofstraße, Schuby", anzahl: 10, preis: 60, kursbegrenzung: null }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-01", typ: "kurs", rubrik: "gesundheit",
     titel: "Wir bleiben in Bewegung mit Wassergymnastik – Dienstags-Gruppe",
     beschreibung: "Gymnastik im warmen Wasser – schonend für die Gelenke, für alle Altersgruppen geeignet.",
     optionen: [
       { bezeichnung: "", kursleiter: "Clarissa Preußer", start: "2026-08-18", wochentag: "Dienstag", uhrzeit: "13:45 Uhr", ort: "Schwimmhalle Schleswig, kleines Becken", anzahl: 16, preis: 80, kursbegrenzung: null }
-    ]
-  },
-
-  {
-    id: "OKR-2026-2-05", typ: "kurs", rubrik: "sport",
-    titel: "Line Dance Anfängergruppe",
-    beschreibung: "Line Dance zu Country-Musik, Rock&Pop, Schlager und Oldies – ohne Partner, für jede Altersschicht.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Marianne Scheel", start: "2026-08-18", wochentag: "Dienstag", uhrzeit: "17:30 – 18:30 Uhr", ort: "Dag-Hammarskjöld-Haus, Schuby, Bahnhofstr. 3", anzahl: 10, preis: 25, kursbegrenzung: null }
     ]
   },
 
@@ -217,6 +172,51 @@ const TERMINE = [
       { bezeichnung: "Termin 2", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-03", wochentag: "Dienstag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
       { bezeichnung: "Termin 3", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-09", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: null },
       { bezeichnung: "Termin 4", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-02", typ: "kurs", rubrik: "gesundheit",
+    titel: "Wir bleiben in Bewegung mit Wassergymnastik – Freitags-Gruppe",
+    beschreibung: "Gymnastik im warmen Wasser – schonend für die Gelenke, für alle Altersgruppen geeignet.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Tanja Schimmer", start: "2026-08-21", wochentag: "Freitag", uhrzeit: "11:45 Uhr", ort: "Schwimmhalle Schleswig, kleines Becken", anzahl: 16, preis: 80, kursbegrenzung: 1 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-05", typ: "kurs", rubrik: "sport",
+    titel: "Line Dance Anfängergruppe",
+    beschreibung: "Line Dance zu Country-Musik, Rock&Pop, Schlager und Oldies – ohne Partner, für jede Altersschicht.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Marianne Scheel", start: "2026-08-18", wochentag: "Dienstag", uhrzeit: "17:30 – 18:30 Uhr", ort: "Dag-Hammarskjöld-Haus, Schuby, Bahnhofstr. 3", anzahl: 10, preis: 25, kursbegrenzung: 1 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-10", typ: "kurs", rubrik: "sport",
+    titel: "Outdoorsport – Bewegung an frischer Luft",
+    beschreibung: "Dehn-, Streck-, Lauf-, Koordinations- und Entspannungsübungen an der frischen Luft (angelehnt an Heigl).",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Martina Henningsen", start: "2026-08-17", wochentag: "Montag", uhrzeit: "15:15 – 16:15 Uhr", ort: "Schule Schuby", anzahl: 10, preis: 25, kursbegrenzung: 10 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-06", typ: "kurs", rubrik: "sport",
+    titel: "Line Dance Gruppe 1",
+    beschreibung: "Line Dance zu Country-Musik, Rock&Pop, Schlager und Oldies – ohne Partner, für jede Altersschicht.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Marianne Scheel", start: "2026-08-20", wochentag: "Donnerstag", uhrzeit: "17:00 – 18:00 Uhr", ort: "Dag-Hammarskjöld-Haus, Schuby, Bahnhofstr. 3", anzahl: 10, preis: 25, kursbegrenzung: 10 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-15", typ: "kurs", rubrik: "gesundheit",
+    titel: "Kundalini Yoga",
+    beschreibung: "Neuer Kurs – der Einstieg ist jederzeit möglich!",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Martina Rathjen", start: "2026-08-25", wochentag: "Dienstag", uhrzeit: "19:00 – 20:15 Uhr", ort: "Gemeinderaum der Kirche, Bahnhofstraße, Schuby", anzahl: 10, preis: 60, kursbegrenzung: 1 }
     ]
   }
 ];
