@@ -164,18 +164,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-11", typ: "kurs", rubrik: "koch",
-    titel: "Gerichte zum Erntedank",
-    beschreibung: "Gemeinsames herbstliches Kochen. Hinweis: Bitte kleine Behältnisse mitbringen. Kursgebühr zzgl. Kochumlage.",
-    optionen: [
-      { bezeichnung: "Termin 1", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-02", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
-      { bezeichnung: "Termin 2", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-03", wochentag: "Dienstag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
-      { bezeichnung: "Termin 3", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-09", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: null },
-      { bezeichnung: "Termin 4", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-02", typ: "kurs", rubrik: "gesundheit",
     titel: "Wir bleiben in Bewegung mit Wassergymnastik – Freitags-Gruppe",
     beschreibung: "Gymnastik im warmen Wasser – schonend für die Gelenke, für alle Altersgruppen geeignet.",
@@ -217,6 +205,18 @@ const TERMINE = [
     beschreibung: "Neuer Kurs – der Einstieg ist jederzeit möglich!",
     optionen: [
       { bezeichnung: "", kursleiter: "Martina Rathjen", start: "2026-08-25", wochentag: "Dienstag", uhrzeit: "19:00 – 20:15 Uhr", ort: "Gemeinderaum der Kirche, Bahnhofstraße, Schuby", anzahl: 10, preis: 60, kursbegrenzung: 1 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-11", typ: "kurs", rubrik: "koch",
+    titel: "Gerichte zum Erntedank",
+    beschreibung: "Gemeinsames herbstliches Kochen. Hinweis: Bitte kleine Behältnisse mitbringen. Kursgebühr zzgl. Kochumlage.",
+    optionen: [
+      { bezeichnung: "Termin 1", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-02", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 2", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-03", wochentag: "Dienstag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 3", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-09", wochentag: "Montag", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
+      { bezeichnung: "Termin 4", kursleiter: "Kirsten Krummpeter (Kirstens Köök)", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "18:30 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
     ]
   }
 ];
