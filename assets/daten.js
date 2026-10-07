@@ -218,5 +218,14 @@ const TERMINE = [
       { bezeichnung: "Termin 1", kursleiter: "Gerd Kesseler", start: "2026-10-14", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
       { bezeichnung: "Termin 2", kursleiter: "Gerd Kesseler", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Firma Schmidt Hüsby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
     ]
+  },
+
+  {
+    id: "BIG-01", typ: "veranstaltung", veranstaltungsart: "buerger",
+    titel: "Das Frauenzentrum Schleswig",
+    beschreibung: "Die Arbeit des Frauenzentrums Schleswig ist sehr vielseitig und beschäftigt sich vor Allem mit Frauen in schwierigen Situationen. Gerade dann, wenn das Leben besonders problematisch ist, benötigen Frauen Hilfe und Unterstützung. Und dann stellen sich die Fragen: •\tWer bietet Unterstützung an? •\tWelche Unterstützung wird angeboten?  •\tWie läuft die Beratung ab?  •\tWelche Inhalte können in der Beratung angesprochen werden? Da diese Probleme oft aus häuslicher Gewalt resultieren und dies häufig im Verborgenen geschieht, betrifft dieses Thema doch viele Menschen direkt oder indirekt, auch die, die helfen wollen! •\tDoch was genau bedeutet „häusliche Gewalt“?  •\tWelche Formen kann sie annehmen?  •\tWie häufig kommt sie tatsächlich vor? In diesem Vortrag gibt Frau Joy Pouline Albrecht vom Frauenzentrum mit ihrer Kollegin einen kompakten Überblick über die Definition, Formen und aktuelle Zahlen. Sie erfahren, warum das Thema Jede und Jeden betrifft – unabhängig von Alter, Geschlecht oder sozialem Umfeld – und welche konkreten Handlungsmöglichkeiten Sie im Alltag haben, wenn Sie häusliche Gewalt wahrnehmen oder selbst betroffen sind. Die Mitarbeiterinnen des Frauenzentrums Schleswig sind unter folgenden Kontaktdaten erreichbar: Telefon: 04621 – 25544 Mail: info@frauenzentrum-schleswig.de Weitere Informationen auch auf der Website www.frauenzentrum-schleswig.de",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Frau Joy Pouline Albrecht", start: "2026-10-27", wochentag: "", uhrzeit: "", ort: "Dag Hammarsköld Haus in Schuby, Bahnhofstr. 3", anzahl: 1, preis: 0, kursbegrenzung: null }
+    ]
   }
 ];
