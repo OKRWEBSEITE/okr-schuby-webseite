@@ -227,5 +227,14 @@ const TERMINE = [
     optionen: [
       { bezeichnung: "", kursleiter: "Frau Joy Pouline Albrecht", start: "2026-10-27", wochentag: "", uhrzeit: "", ort: "Dag Hammarsköld Haus in Schuby, Bahnhofstr. 3", anzahl: 1, preis: 0, kursbegrenzung: null }
     ]
+  },
+
+  {
+    id: "BIG-02", typ: "veranstaltung", veranstaltungsart: "buerger",
+    titel: "Das Taktische Luftwaffengeschwader 51 \"Immelmann\" - Auftrag und Vorhaben",
+    beschreibung: "Der Kommodore des TaktLwGeschw 51 \"I\" stellt in seinem Vortrag den Auftrag des Geschwaders dar, seine Struktur und die Herausforderungen durch die aktuelle Situation. Die Vorhaben des Verbandes und die Bedeutung dieser Vorhaben für die Bundeswehr aber auch die Region werden von ihm erläutert. Oberst Schumacher steht anschließend für Fragen zur Verfügung.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Oberst Jens Schumacher", start: "2026-11-10", wochentag: "", uhrzeit: "", ort: "Dag Hammarskjöld Haus in Schuby, Bahnhofstr3", anzahl: 1, preis: 0, kursbegrenzung: null }
+    ]
   }
 ];
