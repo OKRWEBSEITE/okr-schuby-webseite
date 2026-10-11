@@ -73,15 +73,6 @@ const TERMINE = [
   },
 
   {
-    id: "OKR-2026-2-16", typ: "kurs", rubrik: "allgemein",
-    titel: "Rum Latino – Se habla español - Vorankündigung 2027",
-    beschreibung: "Rum-Tasting mit Ingo Annies als Moderator. Vorgestellt werden 6 Rum aus dem spanischsprachigen Raum. Kosten sind vorab zu überweisen. Dauer ca. 2,5 Stunden.",
-    optionen: [
-      { bezeichnung: "", kursleiter: "Ingo Annies", start: "2027-01-13", wochentag: "Freitag", uhrzeit: "19:30 Uhr", ort: "Sportlerheim", anzahl: 1, preis: 25, kursbegrenzung: 20 }
-    ]
-  },
-
-  {
     id: "OKR-2026-2-12", typ: "kurs", rubrik: "allgemein",
     titel: "Workshop Malen mit Acrylfarben",
     beschreibung: "Verschiedene Techniken mit verschiedenen Materialien. Hinweis: Vorhandenes Material bitte mitbringen.",
@@ -217,6 +208,15 @@ const TERMINE = [
     optionen: [
       { bezeichnung: "Termin 1", kursleiter: "Gerd Kesseler", start: "2026-10-14", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Schule Schuby", anzahl: 1, preis: 8, kursbegrenzung: 12 },
       { bezeichnung: "Termin 2", kursleiter: "Gerd Kesseler", start: "2026-11-11", wochentag: "Mittwoch", uhrzeit: "19:00 Uhr", ort: "Firma Schmidt Hüsby", anzahl: 1, preis: 8, kursbegrenzung: 12 }
+    ]
+  },
+
+  {
+    id: "OKR-2026-2-16", typ: "kurs", rubrik: "allgemein",
+    titel: "Rum Latino – Se habla español - Vorankündigung 2027",
+    beschreibung: "Rum-Tasting mit Ingo Annies als Moderator. Vorgestellt werden 6 Rum aus dem spanischsprachigen Raum. Kosten sind vorab zu überweisen. Dauer ca. 2,5 Stunden.",
+    optionen: [
+      { bezeichnung: "", kursleiter: "Ingo Annies", start: "2027-01-13", wochentag: "Freitag", uhrzeit: "19:30 Uhr", ort: "Sportlerheim", anzahl: 1, preis: 25, kursbegrenzung: 20 }
     ]
   },
 
