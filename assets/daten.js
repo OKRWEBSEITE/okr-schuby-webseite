@@ -232,9 +232,9 @@ const TERMINE = [
   {
     id: "BIG-02", typ: "veranstaltung", veranstaltungsart: "buerger",
     titel: "Das Taktische Luftwaffengeschwader 51 \"Immelmann\" - Auftrag und Vorhaben",
-    beschreibung: "Der Kommodore des TaktLwGeschw 51 \"I\" stellt in seinem Vortrag den Auftrag des Geschwaders dar, seine Struktur und die Herausforderungen durch die aktuelle Situation. Die Vorhaben des Verbandes und die Bedeutung dieser Vorhaben für die Bundeswehr aber auch die Region werden von ihm erläutert. Oberst Schumacher steht anschließend für Fragen zur Verfügung.",
+    beschreibung: "Das Taktische Luftwaffengeschwader 51 \"Immelmann\" ist in unserer Unmittelbaren Nachbarschaft beheimatet - ein großer Nachbar, der vielen Menschen Arbeit bietet, ein großer Wirtschaftsfaktor ist, die wir häufig hören und der hilft, unsere Freiheit zu bewahren. Aber was genau machen die vielen Menschen hinter dem Zaun. Der Kommandeur der Fliegenden Gruppe des TaktLwGeschw 51 \"I\", Herr Oberstleutnant Christian Becker, stellt in seinem Vortrag den Auftrag des Geschwaders dar, seine Struktur und die Herausforderungen durch die aktuelle Situation. Die Vorhaben des Verbandes und die Bedeutung dieser Vorhaben für die Bundeswehr aber auch die Region werden von ihm erläutert. Oberstleutnant Becker steht anschließend für Fragen zur Verfügung.",
     optionen: [
-      { bezeichnung: "", kursleiter: "Oberst Jens Schumacher", start: "2026-11-10", wochentag: "", uhrzeit: "", ort: "Dag Hammarskjöld Haus in Schuby, Bahnhofstr3", anzahl: 1, preis: 0, kursbegrenzung: null }
+      { bezeichnung: "", kursleiter: "Oberstleutnant Christian Becker", start: "2026-11-10", wochentag: "", uhrzeit: "", ort: "Dag Hammarskjöld Haus in Schuby, Bahnhofstr3", anzahl: 1, preis: 0, kursbegrenzung: null }
     ]
   }
 ];
